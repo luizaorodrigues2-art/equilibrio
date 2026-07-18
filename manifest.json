@@ -1,0 +1,20 @@
+{
+  "name": "EQUILÍBRIO INTEGRAL",
+  "short_name": "Equilíbrio",
+  "description": "Uma jornada integrada para fortalecer corpo, mente e espírito.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A2540",
+  "theme_color": "#0A2540",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "education"]
+}
