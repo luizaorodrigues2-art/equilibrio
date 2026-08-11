@@ -89,6 +89,9 @@ export type CoverPackage = {
     generatedAt: string;
     seed: number;
     engine: string;
+    credit?: string;
+    creditUrl?: string;
+    source?: string;
   };
 };
 
@@ -556,7 +559,7 @@ const VARIANT_SPECS: { key: keyof CoverVariants; width: number; height: number; 
   { key: "share", width: 1080, height: 1080, file: "share.webp" },
 ];
 
-export async function generateCoverPackage(
+async function generateArtCoverPackage(
   article: Pick<
     Article,
     "slug" | "title" | "subtitle" | "excerpt" | "category" | "categorySlug" | "tags"
@@ -621,6 +624,292 @@ export async function generateCoverPackage(
       engine: "equilibrio-cover-ai-v1",
     },
   };
+}
+
+/* ============================================================
+   FOTOGRAFIA REAL (banco gratuito Pexels)
+   Substitui a arte abstrata por uma foto real e contextual,
+   única por artigo, com tratamento escuro do site.
+   ============================================================ */
+
+type PexelsPhoto = {
+  id: number;
+  photographer: string;
+  photographer_url: string;
+  alt?: string;
+  src: { original: string; large2x: string; large: string; landscape: string };
+};
+
+/** Consultas de imagem, do específico (motivo do texto) ao geral (missão). */
+function buildPhotoQueries(brief: CoverBrief, categorySlug: string): string[] {
+  const motifQ: Record<string, string> = {
+    "arcos-respiratorios": "woman deep breathing calm",
+    "estrutura-articular": "active healthy senior stretching outdoors",
+    "lua-e-ondas": "person sleeping peaceful bedroom",
+    "formas-organicas": "fresh healthy food and water",
+    "halo-contemplativo": "meditation sunrise nature serenity",
+    "linhas-mentais": "calm mindfulness relaxation woman",
+    "folhas-e-luz": "healthy fresh vegetables cooking",
+    "gotas-e-fluxo": "glass of water hydration",
+    "silhueta-movimento": "yoga stretching wellness",
+    "geometria-vital": "wellness lifestyle serene",
+  };
+  const catQ: Record<string, string> = {
+    "saude-do-corpo": "healthy active lifestyle wellness",
+    "saude-da-mente": "calm mindfulness mental wellbeing",
+    "saude-espiritual": "meditation serenity nature light",
+  };
+  const list = [
+    motifQ[brief.motif],
+    catQ[categorySlug],
+    "wellness serene lifestyle",
+  ].filter(Boolean) as string[];
+  return [...new Set(list)];
+}
+
+async function fetchPexelsCandidates(
+  queries: string[],
+  apiKey: string
+): Promise<PexelsPhoto[]> {
+  const seen = new Set<number>();
+  const out: PexelsPhoto[] = [];
+  for (const q of queries) {
+    try {
+      const res = await fetch(
+        `https://api.pexels.com/v1/search?query=${encodeURIComponent(
+          q
+        )}&orientation=landscape&size=large&per_page=30`,
+        { headers: { Authorization: apiKey } }
+      );
+      if (!res.ok) continue;
+      const data = (await res.json()) as { photos?: PexelsPhoto[] };
+      for (const p of data.photos || []) {
+        if (!seen.has(p.id)) {
+          seen.add(p.id);
+          out.push(p);
+        }
+      }
+      if (out.length >= 24) break;
+    } catch {
+      /* tenta a próxima consulta */
+    }
+  }
+  return out;
+}
+
+/** Camada transparente: leve tint azul-marinho + gradiente para leitura. */
+function renderPhotoOverlaySvg(
+  brief: CoverBrief,
+  title: string,
+  category: string,
+  opts?: { width?: number; height?: number; showTitle?: boolean; showLabels?: boolean }
+): string {
+  const w = opts?.width ?? 1600;
+  const h = opts?.height ?? 900;
+  const showTitle = opts?.showTitle === true;
+  const showLabels = opts?.showLabels === true || showTitle;
+  const lines = wrapTitle(title, 32);
+  const titleSize = Math.max(30, Math.round(Math.min(w, h) * 0.05));
+  const padX = Math.round(w * 0.07);
+  const firstLineY = h - Math.round(h * 0.11) - (lines.length - 1) * (titleSize + 10);
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+  <defs>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A2540" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#0A2540" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0A2540" stop-opacity="${showTitle ? 0.92 : 0.7}"/>
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#0A2540" opacity="0.16"/>
+  <rect width="${w}" height="${h}" fill="url(#scrim)"/>
+  ${
+    showLabels
+      ? `<text x="${padX}" y="${firstLineY - titleSize - 18}" fill="#E8C47C" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="${Math.round(
+          h * 0.028
+        )}" letter-spacing="3.5" font-weight="600">${escapeXml(category.toUpperCase())}</text>`
+      : ""
+  }
+  ${
+    showTitle
+      ? lines
+          .map(
+            (line, i) =>
+              `<text x="${padX}" y="${firstLineY + i * (titleSize + 10)}" fill="#F7F4EF" font-family="Georgia, 'Times New Roman', serif" font-size="${titleSize}" font-weight="700">${escapeXml(
+                line
+              )}</text>`
+          )
+          .join("\n  ")
+      : ""
+  }
+</svg>`;
+}
+
+async function generatePhotoCoverPackage(
+  article: Pick<
+    Article,
+    "slug" | "title" | "subtitle" | "excerpt" | "category" | "categorySlug" | "tags"
+  > & { contentText?: string },
+  options?: { forceSeed?: number; publicDir?: string }
+): Promise<CoverPackage> {
+  const apiKey = (process.env.PEXELS_API_KEY || "").trim();
+  if (!apiKey) throw new Error("PEXELS_API_KEY ausente");
+
+  const brief = analyzeCoverBrief({
+    slug: article.slug,
+    title: article.title,
+    subtitle: article.subtitle,
+    excerpt: article.excerpt,
+    contentText: article.contentText,
+    category: article.category,
+    categorySlug: article.categorySlug,
+    tags: article.tags,
+    forceSeed: options?.forceSeed,
+  });
+
+  const publicDir = options?.publicDir || path.join(process.cwd(), "public");
+  const projectRoot = path.dirname(publicDir);
+  const mapPath = path.join(projectRoot, "content", "data", "cover-photos.json");
+
+  let photoMap: Record<string, number> = {};
+  try {
+    photoMap = JSON.parse(fs.readFileSync(mapPath, "utf-8"));
+  } catch {
+    photoMap = {};
+  }
+  const usedByOthers = new Set(
+    Object.entries(photoMap)
+      .filter(([slug]) => slug !== article.slug)
+      .map(([, id]) => id)
+  );
+
+  const candidates = await fetchPexelsCandidates(
+    buildPhotoQueries(brief, article.categorySlug || ""),
+    apiKey
+  );
+  if (!candidates.length) throw new Error("Pexels não retornou resultados");
+
+  // Escolha determinística (estável por artigo) e única (sem repetir foto).
+  const start = brief.seed % candidates.length;
+  let chosen: PexelsPhoto | null = null;
+  for (let i = 0; i < candidates.length; i++) {
+    const c = candidates[(start + i) % candidates.length];
+    if (!usedByOthers.has(c.id)) {
+      chosen = c;
+      break;
+    }
+  }
+  if (!chosen) chosen = candidates[start];
+
+  const dl = await fetch(chosen.src.large2x || chosen.src.original || chosen.src.large);
+  if (!dl.ok) throw new Error(`Falha ao baixar a foto (${dl.status})`);
+  const photoBuffer = Buffer.from(await dl.arrayBuffer());
+
+  const outDir = path.join(publicDir, "images", "covers", article.slug);
+  fs.mkdirSync(outDir, { recursive: true });
+
+  const variants = {} as CoverVariants;
+  for (const spec of VARIANT_SPECS) {
+    const forSocial = spec.key === "og" || spec.key === "twitter" || spec.key === "share";
+    const overlay = Buffer.from(
+      renderPhotoOverlaySvg(brief, article.title, article.category, {
+        width: spec.width,
+        height: spec.height,
+        showTitle: forSocial,
+        showLabels: forSocial,
+      })
+    );
+    const outPath = path.join(outDir, spec.file);
+    await sharp(photoBuffer)
+      .resize(spec.width, spec.height, { fit: "cover", position: "attention" })
+      .modulate({ saturation: 0.9, brightness: 0.98 })
+      .composite([{ input: overlay, top: 0, left: 0 }])
+      .webp({ quality: 82 })
+      .toFile(outPath);
+    variants[spec.key] = `/images/covers/${article.slug}/${spec.file}`;
+  }
+
+  // Master (arte de referência) — foto tratada, sem texto.
+  const masterOverlay = Buffer.from(
+    renderPhotoOverlaySvg(brief, article.title, article.category, {
+      width: 1600,
+      height: 900,
+      showTitle: false,
+      showLabels: false,
+    })
+  );
+  await sharp(photoBuffer)
+    .resize(1600, 900, { fit: "cover", position: "attention" })
+    .modulate({ saturation: 0.9, brightness: 0.98 })
+    .composite([{ input: masterOverlay, top: 0, left: 0 }])
+    .webp({ quality: 84 })
+    .toFile(path.join(outDir, "master.webp"));
+
+  // Persiste a foto usada (garante unicidade entre artigos).
+  photoMap[article.slug] = chosen.id;
+  try {
+    fs.mkdirSync(path.dirname(mapPath), { recursive: true });
+    fs.writeFileSync(mapPath, JSON.stringify(photoMap, null, 2), "utf-8");
+  } catch {
+    /* não bloqueia a geração */
+  }
+
+  const kw = brief.keywords.slice(0, 4).join(", ");
+  const coverAlt = `${article.title} — fotografia editorial sobre ${article.category}${
+    kw ? `, relacionada a ${kw}` : ""
+  }`;
+  const credit = chosen.photographer
+    ? `Foto: ${chosen.photographer} / Pexels`
+    : "Foto: Pexels";
+
+  return {
+    coverImage: variants.home,
+    coverAlt,
+    coverCaption: credit,
+    coverDescription: `Fotografia real selecionada para o tema do artigo (${article.category}). ${credit}.`,
+    coverVariants: variants,
+    coverMeta: {
+      style: "Fotografia Realista",
+      layout: brief.layout,
+      sentiment: brief.sentiment,
+      keywords: brief.keywords,
+      lighting: brief.lighting,
+      motif: brief.motif,
+      generatedAt: new Date().toISOString(),
+      seed: brief.seed,
+      engine: "equilibrio-cover-photo-v1",
+      credit: chosen.photographer,
+      creditUrl: chosen.photographer_url,
+      source: "Pexels",
+    },
+  };
+}
+
+/**
+ * Gera a capa do artigo. Prioriza FOTOGRAFIA REAL (Pexels) quando há
+ * PEXELS_API_KEY configurada; caso contrário (ou em falha de rede),
+ * usa a arte gerada como fallback para nunca quebrar a publicação.
+ */
+export async function generateCoverPackage(
+  article: Pick<
+    Article,
+    "slug" | "title" | "subtitle" | "excerpt" | "category" | "categorySlug" | "tags"
+  > & { contentText?: string },
+  options?: { forceSeed?: number; publicDir?: string }
+): Promise<CoverPackage> {
+  if ((process.env.PEXELS_API_KEY || "").trim()) {
+    try {
+      return await generatePhotoCoverPackage(article, options);
+    } catch (err) {
+      console.warn(
+        `[cover] Foto real indisponível para "${article.slug}" (${
+          (err as Error).message
+        }). Usando arte de fallback.`
+      );
+    }
+  }
+  return generateArtCoverPackage(article, options);
 }
 
 export function buildSeoFromArticle(input: {

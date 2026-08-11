@@ -50,6 +50,10 @@ export type Article = {
     generatedAt: string;
     seed: number;
     engine: string;
+    /** Crédito da fotografia real (banco gratuito), quando aplicável */
+    credit?: string;
+    creditUrl?: string;
+    source?: string;
   };
   publishedAt: string;
   updatedAt: string;
