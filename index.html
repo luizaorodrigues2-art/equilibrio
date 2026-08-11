@@ -40,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="assets/hero-bg.png" fetchpriority="high">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&q=80&auto=format&fit=crop" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Google Analytics Placeholder -->
@@ -247,6 +247,9 @@
           <a href="#infobooks" class="btn btn--primary btn--magnetic">Explorar Conteúdo</a>
           <a href="#jornada" class="btn btn--outline btn--magnetic">Iniciar Jornada</a>
         </div>
+
+        <!-- Destaque do Dia (preenchido por js/script.js) -->
+        <div class="featured-day" id="featured-day" role="complementary" aria-label="Destaque do dia"></div>
       </div>
 
       <div class="hero__scroll" aria-hidden="true">
@@ -592,8 +595,8 @@
                 </div>
               </article>
 
-              <article class="blog-card reveal">
-                <div class="blog-card__image" style="--blog-img: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80')" role="img" aria-label="Treino funcional"></div>
+              <article class="blog-card reveal" id="blog-energia">
+                <div class="blog-card__image" style="--blog-img: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80')" role="img" aria-label="Pessoa em treino funcional erguendo peso"></div>
                 <div class="blog-card__body">
                   <time class="blog-card__date" datetime="2026-05-10">10 Mai 2026</time>
                   <h3 class="blog-card__title">Exercícios para mais energia</h3>
@@ -602,8 +605,8 @@
                 </div>
               </article>
 
-              <article class="blog-card reveal">
-                <div class="blog-card__image" style="--blog-img: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80')" role="img" aria-label="Livros empilhados"></div>
+              <article class="blog-card reveal" id="blog-livros">
+                <div class="blog-card__image" style="--blog-img: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80')" role="img" aria-label="Pilha de livros sobre mesa de madeira ao lado de xícara"></div>
                 <div class="blog-card__body">
                   <time class="blog-card__date" datetime="2026-04-28">28 Abr 2026</time>
                   <h3 class="blog-card__title">Livros para evolução pessoal</h3>
