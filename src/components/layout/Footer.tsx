@@ -36,6 +36,7 @@ export function Footer() {
               <Link href="/sobre">Sobre</Link>
               <Link href="/contato">Contato</Link>
               <Link href="/privacidade">Privacidade</Link>
+              <Link href="/termos">Termos de Uso</Link>
               <Link href="/rss.xml">RSS</Link>
               <Link href="/admin">Área Admin</Link>
             </div>
@@ -56,6 +57,8 @@ export function Footer() {
             </span>
             <nav className="footer-bottom__legal" aria-label="Links legais">
               <Link href="/privacidade">Privacidade</Link>
+              <span aria-hidden="true">·</span>
+              <Link href="/termos">Termos</Link>
               <span aria-hidden="true">·</span>
               <Link href="/contato">Contato</Link>
               <span aria-hidden="true">·</span>

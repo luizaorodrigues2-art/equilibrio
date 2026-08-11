@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -33,6 +34,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <Header />
       <main id="main-content">{children}</main>
       <Footer />
+      <CookieConsent />
     </>
   );
 }
