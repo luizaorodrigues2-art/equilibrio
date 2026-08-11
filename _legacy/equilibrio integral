@@ -1,0 +1,343 @@
+Crie um site institucional premium completo chamado EQUILÍBRIO INTEGRAL.
+
+O código deve ser desenvolvido em:
+
+HTML5
+CSS3
+JavaScript Vanilla
+Totalmente responsivo
+Pronto para VS Code
+Estrutura organizada
+Visual premium
+SEO avançado
+Preparado para Google AdSense
+Preparado para Google Analytics
+Alta performance
+Acessibilidade
+Design moderno 2026
+IDENTIDADE VISUAL
+
+O site deve transmitir:
+
+Paz
+Equilíbrio
+Sofisticação
+Luxo discreto
+Bem-estar
+Desenvolvimento pessoal
+Evolução espiritual
+Saúde física
+Clareza mental
+NÃO UTILIZAR VERDE
+
+Substituir totalmente os tons de verde da referência por:
+
+Azul profundo (#0A2540)
+Azul Serenity (#6FA8DC)
+Azul claro (#DDEEFF)
+Branco puro
+Tons suaves de cinza
+Detalhes em dourado fosco
+
+Visual premium semelhante a:
+
+Apple
+Calm
+Headspace
+Masterclass
+Tesla
+
+Sem copiar nenhum layout existente.
+
+ESTRUTURA GERAL
+
+Site de aproximadamente 2 telas completas de rolagem.
+
+HEADER FIXO
+
+Logo:
+
+EQUILÍBRIO INTEGRAL
+
+Menu:
+
+Início
+Corpo
+Mente
+Espírito
+Infobooks
+Jornada
+Blog
+Sobre
+Contato
+
+Efeito Glassmorphism.
+
+HERO SECTION
+
+Imagem de fundo inspirada em:
+
+natureza
+mar
+montanhas
+nascer do sol
+ambiente elegante
+
+Texto principal:
+
+MOVIMENTO CONSCIENTE
+MENTE CLARA
+ESPÍRITO LIVRE
+
+Subtexto:
+
+"Uma jornada integrada para fortalecer corpo, mente e espírito."
+
+Botões:
+
+Explorar Conteúdo
+Iniciar Jornada
+
+Animações suaves.
+
+Parallax discreto.
+
+SEÇÃO CORPO
+
+Bloco premium.
+
+Ícone.
+
+Texto exemplo:
+
+"Desenvolvimento físico através de hábitos saudáveis, movimento consciente e conhecimento."
+
+Cards:
+
+Exercícios
+Alimentação
+Mobilidade
+Sono
+SEÇÃO MENTE
+
+Texto exemplo:
+
+"Fortaleça foco, inteligência emocional e clareza mental."
+
+Cards:
+
+Produtividade
+Autoconhecimento
+Leitura
+Aprendizado
+SEÇÃO ESPÍRITO
+
+Texto exemplo:
+
+"Conecte-se com propósito, valores e crescimento interior."
+
+Cards:
+
+Quebrando Paradigmas
+Jornada Mensal
+Reflexões
+Livros Recomendados
+MENU DE INFOBOOKS
+
+Esta é a seção principal.
+
+Criar um sistema de painéis verticais sobrepostos.
+
+Exatamente neste conceito:
+
+Painéis lado a lado.
+
+Levemente sobrepostos.
+
+Cada painel possui:
+
+imagem de fundo em baixa opacidade
+título
+autor
+descrição curta
+botão abrir
+
+Ao passar o mouse:
+
+painel vem para frente
+aumenta largura
+ganha brilho
+ganha sombra
+animação suave
+
+Criar 6 infobooks fictícios:
+
+Quebrando Paradigmas
+Autor: Nome Autor
+Jornada Mensal
+Autor: Nome Autor
+Corpo em Harmonia
+Autor: Nome Autor
+Mentalidade Elevada
+Autor: Nome Autor
+Propósito e Consciência
+Autor: Nome Autor
+Biblioteca Essencial
+Autor: Nome Autor
+
+Todas as informações devem estar preparadas para substituição futura.
+
+SEÇÃO JORNADA
+
+Timeline moderna.
+
+Passos:
+
+Autoconhecimento
+Organização Mental
+Equilíbrio Físico
+Crescimento Espiritual
+Transformação Integral
+
+Com animação de scroll.
+
+BLOG
+
+Criar cards para artigos.
+
+Exemplos:
+
+Como desenvolver disciplina
+Os benefícios da meditação
+Exercícios para mais energia
+Livros para evolução pessoal
+Rotina equilibrada
+SOBRE
+
+Texto institucional fictício.
+
+Explicar a missão do projeto.
+
+CONTATO
+
+Formulário premium.
+
+Campos:
+
+Nome
+E-mail
+Assunto
+Mensagem
+
+Botão:
+
+Enviar
+
+SEO COMPLETO
+
+Adicionar:
+
+Meta Title
+
+Meta Description
+
+Meta Keywords
+
+Open Graph
+
+Twitter Cards
+
+Canonical
+
+Schema.org Organization
+
+Schema.org Website
+
+Schema.org Blog
+
+Breadcrumb Schema
+
+FAQ Schema
+
+JSON-LD completo.
+
+GOOGLE ADSENSE
+
+Adicionar locais preparados para anúncios:
+
+Banner Hero
+
+Entre Corpo e Mente
+
+Entre Mente e Espírito
+
+Sidebar Blog
+
+Rodapé
+
+Todos identificados:
+
+<!-- Google AdSense Placeholder -->
+GOOGLE ANALYTICS
+
+Criar bloco preparado para inserção do código.
+
+RODAPÉ
+
+Links rápidos.
+
+Redes sociais.
+
+Copyright.
+
+Política de Privacidade.
+
+Termos de Uso.
+
+Mapa do Site.
+
+EFEITOS PREMIUM
+
+Scroll Reveal.
+
+Fade Up.
+
+Hover Magnético.
+
+Glassmorphism.
+
+Parallax.
+
+Microinterações.
+
+Transições suaves.
+
+Cursor elegante.
+
+Loading Screen.
+
+Botão voltar ao topo.
+
+Dark Mode e Light Mode.
+
+ARQUIVOS
+
+Gerar:
+
+index.html
+
+css/style.css
+
+js/script.js
+
+robots.txt
+
+sitemap.xml
+
+manifest.json
+
+favicon placeholder
+
+RESULTADO ESPERADO
+
+O resultado deve parecer um produto premium pronto para venda, com visual luxuoso, moderno, profissional, focado em corpo, mente e espírito, inspirado no conceito da imagem enviada mas sem copiar o layout, utilizando azul como cor principal e destacando a seção de infobooks com painéis verticais sobrepostos altamente interativos.

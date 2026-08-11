@@ -1,0 +1,16 @@
+---
+description: Sempre publicar Equilíbrio Integral no GitHub + Vercel após alterações
+alwaysApply: true
+---
+
+# Auto-ship — EQUILÍBRIO INTEGRAL
+
+Sempre que finalizar uma alteração pedida pela usuária neste repositório (`equilibrio`):
+
+1. Rodar `npm run ship` (ou `node scripts/ship.mjs "mensagem"`) no fim do trabalho.
+2. Isso faz: commit → push GitHub → deploy Vercel produção.
+3. Não perguntar se deve publicar — a usuária pediu fluxo sempre automático.
+4. Nunca commitar `.env`, `.env.local` ou segredos.
+5. Ao terminar, informar a URL de produção: https://equilibrio-one-nu.vercel.app
+
+Exceção: se a usuária pedir explicitamente para **não** publicar naquele momento.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8C5D6" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#6FA8DC" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1C2331" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="48%" r="70%">
+      <stop offset="0%" stop-color="#344055" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1C2331" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.045"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  
+        <rect width="1600" height="900" fill="#1C2331"/>
+        <circle cx="800" cy="405" r="378" fill="#344055" opacity="0.7"/>
+        <circle cx="800" cy="405" r="198" fill="#6FA8DC" opacity="0.18"/>
+      
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+  <rect width="1600" height="900" filter="url(#noise)" opacity="0.5"/>
+  <line x1="304" y1="198" x2="1312" y2="190" stroke="#6FA8DC" stroke-opacity="0.18" stroke-width="2.2"/><line x1="317" y1="246" x2="1312" y2="254" stroke="#B8C5D6" stroke-opacity="0.26" stroke-width="2.2"/><line x1="330" y1="294" x2="1312" y2="286" stroke="#6FA8DC" stroke-opacity="0.33999999999999997" stroke-width="2.2"/><line x1="293" y1="342" x2="1312" y2="350" stroke="#B8C5D6" stroke-opacity="0.18" stroke-width="2.2"/><line x1="306" y1="390" x2="1312" y2="382" stroke="#6FA8DC" stroke-opacity="0.26" stroke-width="2.2"/><line x1="319" y1="438" x2="1312" y2="446" stroke="#B8C5D6" stroke-opacity="0.33999999999999997" stroke-width="2.2"/><line x1="332" y1="486" x2="1312" y2="478" stroke="#6FA8DC" stroke-opacity="0.18" stroke-width="2.2"/><line x1="295" y1="534" x2="1312" y2="542" stroke="#B8C5D6" stroke-opacity="0.26" stroke-width="2.2"/><line x1="308" y1="582" x2="1312" y2="574" stroke="#6FA8DC" stroke-opacity="0.33999999999999997" stroke-width="2.2"/>
+  
+  
+</svg>

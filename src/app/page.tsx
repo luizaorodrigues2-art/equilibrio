@@ -1,0 +1,59 @@
+import {
+  getFeaturedArticle,
+  getPopularArticles,
+  getRecentArticles,
+} from "@/lib/articles";
+import { getTodaysReflection } from "@/lib/daily";
+import { AmbientPointer } from "@/components/cinema/AmbientPointer";
+import { HomeHero } from "@/components/home/HomeHero";
+import { DailyPill } from "@/components/home/DailyPill";
+import {
+  HomeContentHub,
+  HomeFAQ,
+  HomeFeatureRail,
+  HomePlans,
+  HomeSponsors,
+  HomeTestimonials,
+  HomeTrustStrip,
+  SocialRail,
+} from "@/components/home/HomeSections";
+import { AdSlot } from "@/components/ui/AdSlot";
+import { Reveal } from "@/components/cinema/Reveal";
+
+export const revalidate = 3600;
+
+export default function HomePage() {
+  const featured = getFeaturedArticle();
+  const popular = getPopularArticles(6);
+  const recent = getRecentArticles(12);
+  const daily = getTodaysReflection();
+
+  return (
+    <div className="cinema">
+      <AmbientPointer />
+      <SocialRail />
+      <HomeHero />
+
+      <div className="cinema-container" style={{ paddingBlock: "0.75rem 0.5rem" }}>
+        <Reveal>
+          <HomeFeatureRail />
+        </Reveal>
+      </div>
+
+      <DailyPill reflection={daily} />
+
+      <div className="cinema-container" style={{ paddingBlock: "0.5rem 0.75rem" }}>
+        <div className="ad-cinema">
+          <AdSlot id="home-top" label="Leaderboard — topo editorial" minHeight={56} />
+        </div>
+      </div>
+
+      <HomeTrustStrip />
+      <HomeContentHub featured={featured} popular={popular} recent={recent} />
+      <HomePlans />
+      <HomeSponsors />
+      <HomeTestimonials />
+      <HomeFAQ />
+    </div>
+  );
+}

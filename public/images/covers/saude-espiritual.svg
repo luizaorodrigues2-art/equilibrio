@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Saúde Espiritual">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F3EA"/>
+      <stop offset="100%" stop-color="#E8EEF5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="180" fill="#0A2540" opacity="0.08"/>
+  <circle cx="180" cy="520" r="220" fill="#C9A96E" opacity="0.12"/>
+  <g transform="translate(520 210)" fill="none" stroke="#C9A96E" stroke-width="4">
+    <path d="M80 140c0-44 36-80 80-80s80 36 80 80c0 70-80 120-80 120s-80-50-80-120z"/>
+    <circle cx="160" cy="140" r="18" fill="#0A2540" stroke="none"/>
+  </g>
+  <text x="600" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#0A2540">Saúde Espiritual</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#5A6577">EQUILÍBRIO INTEGRAL</text>
+</svg>

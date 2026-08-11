@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C47C" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#9FB3C8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#102A43" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="48%" r="70%">
+      <stop offset="0%" stop-color="#243B53" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#102A43" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.045"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  
+        <rect width="1600" height="900" fill="#102A43"/>
+        <circle cx="800" cy="405" r="378" fill="#243B53" opacity="0.7"/>
+        <circle cx="800" cy="405" r="198" fill="#9FB3C8" opacity="0.18"/>
+      
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+  <rect width="1600" height="900" filter="url(#noise)" opacity="0.5"/>
+  
+        <circle cx="800" cy="432" r="200" fill="none" stroke="#E8C47C" stroke-opacity="0.22" stroke-width="1.8"/>
+        <circle cx="800" cy="432" r="140" fill="none" stroke="#9FB3C8" stroke-opacity="0.28" stroke-width="1.8"/>
+        <circle cx="800" cy="432" r="72" fill="none" stroke="#E8C47C" stroke-opacity="0.35" stroke-width="1.5"/>
+        <circle cx="800" cy="432" r="36" fill="#E8C47C" opacity="0.65"/>
+      
+  
+  
+</svg>

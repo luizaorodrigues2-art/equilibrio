@@ -1,0 +1,10 @@
+# EQUILÍBRIO INTEGRAL — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.equilibriointegral.com.br/sitemap.xml
+
+# Disallow admin/private paths (future)
+Disallow: /admin/
+Disallow: /private/
