@@ -656,10 +656,90 @@ type OpenverseImage = {
   creator?: string;
   creator_url?: string;
   foreign_landing_url?: string;
+  tags?: { name: string }[];
 };
 
-/** Consultas de imagem, do específico (motivo do texto) ao geral (missão). */
-function buildPhotoQueries(brief: CoverBrief, categorySlug: string): string[] {
+/** Bloqueia fotos fora do universo do blog (bandeira, política, violência, etc.). */
+const PHOTO_BLOCKLIST =
+  /\b(flag|bandeira|president|politic|pol[íi]tica|government|governo|protest|war|guerra|militar|military|army|soldier|weapon|gun|arma|election|elei[çc][ãa]o|parliament|senate|minister|congress|nazi|communis|trump|biden|bolsonaro|lula|police|pol[íi]cia|crime|riot|terror)/i;
+
+function isBlockedPhoto(title?: string, tags?: { name: string }[]): boolean {
+  const blob = `${title || ""} ${(tags || []).map((t) => t.name).join(" ")}`;
+  return PHOTO_BLOCKLIST.test(blob);
+}
+
+/** Busca específica por artigo (lida do tema de cada um). */
+const CURATED_QUERIES: Record<string, string> = {
+  "5-minutos-de-paz-tecnicas-de-relaxamento-para-quem-tem-a-mente-barulhenta":
+    "woman relaxing eyes closed calm",
+  "a-conexao-intestino-cerebro-o-eixo-transmissor-da-saude-fisica":
+    "healthy food yogurt fresh gut",
+  "a-importancia-de-criar-uma-rotina-de-bem-estar-sustentavel":
+    "morning wellness routine tea journal",
+  "alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral":
+    "healthy colorful food bowl vegetables",
+  "aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior":
+    "calm peaceful woman serene",
+  "atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo":
+    "person home workout exercise",
+  "autocuidado-na-pratica-10-habitos-simples-para-transformar-sua-rotina":
+    "self care spa relax candle",
+  "como-o-sono-afeta-sua-saude-mental-e-fisica-tudo-que-voce-precisa-saber":
+    "woman sleeping peacefully bedroom",
+  "criando-o-seu-santuario-em-casa-passos-simples-para-um-cantinho-de-paz":
+    "cozy peaceful home plants candles",
+  "descomplicando-a-espiritualidade-o-que-ela-tem-a-ver-com-a-sua-paz-de-espirito":
+    "meditation sunrise nature peace",
+  "desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente":
+    "detox water lemon fresh herbs",
+  "detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma":
+    "person relaxing nature no phone",
+  "espiritualidade-na-cozinha-o-poder-de-comer-prestando-atencao":
+    "mindful eating healthy meal table",
+  "estresse-no-dia-a-dia-como-reconhecer-os-sinais-e-agir-antes-que-vire-um-problem":
+    "woman relaxing breathing stress relief",
+  "gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao":
+    "kindness helping hands people",
+  "hidratacao-profunda-a-agua-como-purificadora-das-celulas":
+    "glass of water hydration fresh",
+  "longevidade-o-segredo-para-uma-vida-longa-e-saudavel":
+    "happy healthy senior smiling",
+  "longevidade-saudavel-habitos-atuais-que-protegem-suas-articulacoes-no-futuro":
+    "active senior stretching outdoors",
+  "movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao":
+    "woman yoga stretching outdoors",
+  "nutricao-consciente-alimentando-o-corpo-alem-das-calorias":
+    "healthy meal fresh vegetables plate",
+  "o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao":
+    "gratitude journal writing coffee",
+  "o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos":
+    "peaceful serene woman calm",
+  "o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa":
+    "wellbeing balance calm nature",
+  "o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador":
+    "restful sleep peaceful bedroom",
+  "o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital":
+    "good posture stretching back health",
+  "o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital-2":
+    "stretching spine wellness posture",
+  "pe-na-terra-como-o-contato-com-a-natureza-limpa-a-nossa-energia":
+    "barefoot walking nature grass",
+  "relacoes-saudaveis-como-a-comunicacao-constroi-o-bem-estar":
+    "friends talking connection happy",
+  "respiracao-diafragmatica-o-santo-graal-da-oxigenacao-celular":
+    "woman deep breathing fresh air",
+  "saude-mental-cuidando-da-mente-em-tempos-de-incerteza-e-ansiedade":
+    "calm mindfulness woman peaceful",
+  "sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo":
+    "healthy citrus fruits vitamin food",
+};
+
+/** Consultas de imagem: específica por artigo → motivo → categoria → genérico. */
+function buildPhotoQueries(
+  brief: CoverBrief,
+  categorySlug: string,
+  slug: string
+): string[] {
   const motifQ: Record<string, string> = {
     "arcos-respiratorios": "woman deep breathing calm",
     "estrutura-articular": "active healthy senior stretching outdoors",
@@ -678,9 +758,10 @@ function buildPhotoQueries(brief: CoverBrief, categorySlug: string): string[] {
     "saude-espiritual": "meditation serenity nature light",
   };
   const list = [
+    CURATED_QUERIES[slug],
     motifQ[brief.motif],
     catQ[categorySlug],
-    "wellness serene lifestyle",
+    "wellness serene lifestyle calm",
   ].filter(Boolean) as string[];
   return [...new Set(list)];
 }
@@ -724,22 +805,31 @@ async function fetchPexelsCandidates(
   return out;
 }
 
-/** Openverse (banco de imagens livres, SEM chave) → candidatos normalizados. */
-async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandidate[]> {
-  const seen = new Set<string>();
-  const out: PhotoCandidate[] = [];
+/** Uma passada de busca no Openverse (opcionalmente restrita a fontes). */
+async function openverseSearch(
+  queries: string[],
+  sources: string,
+  seen: Set<string>,
+  out: PhotoCandidate[]
+): Promise<void> {
   for (const q of queries) {
+    if (out.length >= 24) return;
     try {
-      const res = await fetch(
-        `https://api.openverse.org/v1/images/?q=${encodeURIComponent(
-          q
-        )}&license_type=commercial&mature=false&page_size=20`,
-        { headers: { "User-Agent": FETCH_UA, Accept: "application/json" } }
-      );
+      const params = new URLSearchParams({
+        q,
+        license_type: "commercial",
+        mature: "false",
+        page_size: "20",
+      });
+      if (sources) params.set("source", sources);
+      const res = await fetch(`https://api.openverse.org/v1/images/?${params.toString()}`, {
+        headers: { "User-Agent": FETCH_UA, Accept: "application/json" },
+      });
       if (!res.ok) continue;
       const data = (await res.json()) as { results?: OpenverseImage[] };
       for (const r of data.results || []) {
         if (!r.url || seen.has(r.id)) continue;
+        if (isBlockedPhoto(r.title, r.tags)) continue; // sem bandeira/política/violência
         seen.add(r.id);
         out.push({
           id: r.id,
@@ -749,11 +839,22 @@ async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandida
           source: "Openverse",
         });
       }
-      if (out.length >= 24) break;
     } catch {
       /* tenta a próxima consulta */
     }
   }
+}
+
+/**
+ * Openverse (SEM chave) → candidatos normalizados.
+ * 1) fontes de fotos profissionais (StockSnap/Rawpixel/Nappy) — limpas e no tema;
+ * 2) só se faltar, amplia para todas as fontes (ainda com bloqueio de política).
+ */
+async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandidate[]> {
+  const seen = new Set<string>();
+  const out: PhotoCandidate[] = [];
+  await openverseSearch(queries, "stocksnap,rawpixel,nappy,wordpress", seen, out);
+  if (out.length < 4) await openverseSearch(queries, "", seen, out);
   return out;
 }
 
@@ -964,7 +1065,7 @@ export async function generateCoverPackage(
     tags: article.tags,
     forceSeed: options?.forceSeed,
   });
-  const queries = buildPhotoQueries(brief, article.categorySlug || "");
+  const queries = buildPhotoQueries(brief, article.categorySlug || "", article.slug);
 
   try {
     const apiKey = (process.env.PEXELS_API_KEY || "").trim();
