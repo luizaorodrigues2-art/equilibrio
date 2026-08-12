@@ -11,7 +11,6 @@ import {
   HomeContentHub,
   HomeFAQ,
   HomeFeatureRail,
-  HomePlans,
   HomeSponsors,
   HomeTestimonials,
   HomeTrustStrip,
@@ -50,7 +49,6 @@ export default function HomePage() {
 
       <HomeTrustStrip />
       <HomeContentHub featured={featured} popular={popular} recent={recent} />
-      <HomePlans />
       <HomeSponsors />
       <HomeTestimonials />
       <HomeFAQ />

@@ -10,16 +10,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
     "/artigos",
-    "/assinatura",
     "/sobre",
     "/contato",
     "/busca",
     "/privacidade",
+    "/termos",
   ].map((path) => ({
     url: `${siteConfig.url}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? "daily" : "weekly",
-    priority: path === "" ? 1 : path === "/assinatura" ? 0.9 : 0.7,
+    priority: path === "" ? 1 : 0.7,
   }));
 
   return [

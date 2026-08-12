@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { DailyReflection } from "@/lib/daily";
 import { Reveal } from "@/components/cinema/Reveal";
 
@@ -19,9 +18,6 @@ export function DailyPill({ reflection }: { reflection: DailyReflection | null }
             </h2>
             <p className="daily-pill__body">{reflection.body}</p>
             <p className="daily-pill__hint">Seu momento diário — um minuto para você.</p>
-            <Link href="/assinatura" className="daily-pill__cta">
-              Receber reflexões na assinatura →
-            </Link>
           </div>
         </Reveal>
       </div>

@@ -23,7 +23,6 @@ export function Footer() {
             <h3 style={{ fontFamily: "var(--font-serif)", marginTop: 0 }}>Explorar</h3>
             <div style={{ display: "grid", gap: "0.45rem", color: "var(--text-muted)" }}>
               <Link href="/artigos">Artigos</Link>
-              <Link href="/assinatura">Assinatura</Link>
               <Link href="/categoria/saude-do-corpo">Saúde do Corpo</Link>
               <Link href="/categoria/saude-da-mente">Saúde da Mente</Link>
               <Link href="/categoria/saude-espiritual">Saúde Espiritual</Link>
@@ -61,8 +60,6 @@ export function Footer() {
               <Link href="/termos">Termos</Link>
               <span aria-hidden="true">·</span>
               <Link href="/contato">Contato</Link>
-              <span aria-hidden="true">·</span>
-              <Link href="/assinatura">Assinatura</Link>
               <span aria-hidden="true">·</span>
               <Link href="/admin">Admin</Link>
             </nav>

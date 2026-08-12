@@ -28,12 +28,6 @@ const themes = [
     desc: "A integração que transforma a rotina.",
     icon: "M12 4a8 8 0 100 16 8 8 0 000-16zm0 3v10m-5-5h10",
   },
-  {
-    href: "/assinatura",
-    label: "Bem-estar",
-    desc: "Hábitos conscientes para viver melhor.",
-    icon: "M4 12c2-4 6-7 8-7s6 3 8 7c-2 4-6 7-8 7s-6-3-8-7z",
-  },
 ];
 
 export function HomeHero({ featured }: { featured?: ArticleSummary | null }) {
@@ -111,19 +105,12 @@ export function HomeHero({ featured }: { featured?: ArticleSummary | null }) {
             <p className="cinema-subtitle">Vida que floresce.</p>
             <div className="cinema-hero__actions">
               <MagneticButton
-                href="/assinatura"
-                className="btn-cinema--primary"
-                track="Comece sua jornada"
-              >
-                Comece sua jornada
-                <span aria-hidden="true">→</span>
-              </MagneticButton>
-              <MagneticButton
                 href="/artigos"
-                className="btn-cinema--ghost"
+                className="btn-cinema--primary"
                 track="Explorar artigos"
               >
                 Explorar artigos
+                <span aria-hidden="true">→</span>
               </MagneticButton>
             </div>
           </div>

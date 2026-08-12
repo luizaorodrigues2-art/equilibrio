@@ -10,7 +10,6 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 const links = [
   { href: "/", label: "Início" },
   { href: "/artigos", label: "Artigos" },
-  { href: "/assinatura", label: "Assinatura" },
   { href: "/categoria/saude-do-corpo", label: "Corpo" },
   { href: "/categoria/saude-da-mente", label: "Mente" },
   { href: "/categoria/saude-espiritual", label: "Espírito" },
@@ -62,13 +61,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/assinatura"
-            className="cta-assine cta-assine--mobile"
-            onClick={() => setOpen(false)}
-          >
-            Assine agora
-          </Link>
         </nav>
 
         <div className="header-actions">
@@ -89,9 +81,6 @@ export function Header() {
           >
             {theme === "dark" ? "☀" : "☾"}
           </button>
-          <Link href="/assinatura" className="cta-assine cta-assine--desktop">
-            Assine agora
-          </Link>
           <button
             className="icon-btn burger"
             aria-label={open ? "Fechar menu" : "Abrir menu"}

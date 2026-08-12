@@ -172,57 +172,6 @@ export function HomeContentHub({
   );
 }
 
-export function HomePlans() {
-  return (
-    <section className="cinema-section plans-cinema" id="assinatura-home">
-      <div className="cinema-container">
-        <Reveal>
-          <div className="plans-cinema__header">
-            <p className="cinema-eyebrow">Clube exclusivo</p>
-            <h2 className="cinema-title" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
-              Assinatura com <em>presença.</em>
-            </h2>
-            <p className="cinema-subtitle">
-              Não é propaganda. É um espaço premium para quem leva a consciência a sério.
-            </p>
-          </div>
-        </Reveal>
-        <div className="plans-cinema__grid">
-          <Reveal className="plans-cinema__card">
-            <div className="plans-cinema__name">Essencial</div>
-            <div className="plans-cinema__price">
-              R$ 9,90 <small>/mês</small>
-            </div>
-            <ul className="plans-cinema__features">
-              <li>Acesso aos artigos premium</li>
-              <li>Newsletter semanal</li>
-              <li>Leitura sem interrupções prioritárias</li>
-            </ul>
-            <MagneticButton href="/assinatura" className="btn-cinema--ghost" track="Plano Essencial">
-              Quero o Essencial
-            </MagneticButton>
-          </Reveal>
-          <Reveal delay={1} className="plans-cinema__card plans-cinema__card--featured">
-            <div className="plans-cinema__name">Premium</div>
-            <div className="plans-cinema__price">
-              R$ 19,90 <small>/mês</small>
-            </div>
-            <ul className="plans-cinema__features">
-              <li>Tudo do Essencial</li>
-              <li>Séries exclusivas e guias</li>
-              <li>Acesso antecipado a novos textos</li>
-              <li>Comunidade e curadoria contínua</li>
-            </ul>
-            <MagneticButton href="/assinatura" className="btn-cinema--primary" track="Plano Premium">
-              Entrar no Premium
-            </MagneticButton>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function HomeSponsors() {
   const brands = ["Aether", "Lumina", "Nord", "Vesper", "Orbit", "Halo"];
   return (
@@ -307,16 +256,16 @@ export function HomeFAQ() {
       a: "Sim. Todos os artigos são autorais, revisados e publicados com cuidado editorial.",
     },
     {
-      q: "Como funciona a assinatura?",
-      a: "Você escolhe Essencial ou Premium e acessa conteúdos e benefícios exclusivos do clube.",
+      q: "Com que frequência há conteúdo novo?",
+      a: "Publicamos novos artigos regularmente sobre corpo, mente e espírito.",
     },
     {
       q: "Os anúncios atrapalham a leitura?",
       a: "Não. Os espaços publicitários são posicionados para não interromper o fluxo de leitura.",
     },
     {
-      q: "Posso cancelar quando quiser?",
-      a: "Sim. A assinatura é simples, transparente e sem amarras.",
+      q: "O conteúdo substitui orientação profissional?",
+      a: "Não. Nosso conteúdo é informativo e educativo; consulte sempre um profissional de saúde.",
     },
   ];
   return (
