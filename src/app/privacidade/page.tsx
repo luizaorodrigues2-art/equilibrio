@@ -34,8 +34,7 @@ export default function PrivacidadePage() {
           <h2>2. Como usamos os dados</h2>
           <p>
             Utilizamos os dados para melhorar o conteúdo e a experiência do site, medir
-            audiência, enviar a newsletter (quando solicitada) e exibir publicidade que
-            ajuda a manter o portal gratuito.
+            audiência, enviar a newsletter (quando solicitada) e exibir publicidade.
           </p>
 
           <h2>3. Cookies</h2>
