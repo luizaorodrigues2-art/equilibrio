@@ -19,7 +19,7 @@
     "paz"
   ],
   "coverImage": "/images/covers/o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa/home.webp",
-  "coverAlt": "Capa editorial do artigo “O Que É Bem-Estar? Entenda o Conceito e Por Que Ele Importa” — estilo Mente, atmosfera acolhedor, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "O Que É Bem-Estar? Entenda o Conceito e Por Que Ele Importa — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-01-18",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 1 - O QUE É BEM ESTAR.docx",
   "faq": [],
-  "coverCaption": "O Que É Bem-Estar? Entenda o Conceito e Por Que Ele Importa · composição magazine left · penumbra serena",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Mente, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual halo contemplativo.",
+  "coverCaption": "Foto: Vishnumishra07 / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Vishnumishra07 / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa/featured.webp",
     "og": "/images/covers/o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa/share.webp"
   },
   "coverMeta": {
-    "style": "Mente",
+    "style": "Fotografia Realista",
     "layout": "magazine-left",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,8 +87,11 @@
     ],
     "lighting": "penumbra serena",
     "motif": "halo-contemplativo",
-    "generatedAt": "2026-08-12T01:04:51.323Z",
+    "generatedAt": "2026-08-12T04:55:54.763Z",
     "seed": 3749154537,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Vishnumishra07",
+    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=179443395",
+    "source": "Openverse"
   }
 }

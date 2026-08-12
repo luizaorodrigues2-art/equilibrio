@@ -19,7 +19,7 @@
     "rotina"
   ],
   "coverImage": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital-2/home.webp",
-  "coverAlt": "Capa editorial do artigo “O Templo Físico: Como a Postura Diária Afeta sua Energia Vital” — estilo Lifestyle, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
+  "coverAlt": "O Templo Físico: Como a Postura Diária Afeta sua Energia Vital — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-01-24",
   "updatedAt": "2026-08-12",
   "readingTime": 4,
@@ -67,8 +67,8 @@
   ],
   "sourceFile": "ARTIGO 1 - O TEMPO FISICO.docx",
   "faq": [],
-  "coverCaption": "O Templo Físico: Como a Postura Diária Afeta sua Energia Vital · composição centered orb · claridade limpa",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Lifestyle, iluminação claridade limpa, textura granulado fino, enquadramento corte diagonal, motivo visual silhueta movimento.",
+  "coverCaption": "Foto: Direct Media / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital-2/featured.webp",
     "og": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital-2/og.webp",
@@ -78,7 +78,7 @@
     "share": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital-2/share.webp"
   },
   "coverMeta": {
-    "style": "Lifestyle",
+    "style": "Fotografia Realista",
     "layout": "centered-orb",
     "sentiment": "acolhedor",
     "keywords": [
@@ -95,8 +95,11 @@
     ],
     "lighting": "claridade limpa",
     "motif": "silhueta-movimento",
-    "generatedAt": "2026-08-12T01:04:54.832Z",
+    "generatedAt": "2026-08-12T04:55:58.571Z",
     "seed": 3279642516,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Direct Media",
+    "creditUrl": "https://stocksnap.io/photo/men-fitness-YWCMXRBDU8",
+    "source": "Openverse"
   }
 }

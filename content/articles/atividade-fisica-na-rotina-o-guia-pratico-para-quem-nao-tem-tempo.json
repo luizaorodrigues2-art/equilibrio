@@ -18,7 +18,7 @@
     "rotina"
   ],
   "coverImage": "/images/covers/atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo/home.webp",
-  "coverAlt": "Capa editorial do artigo “Atividade Física na Rotina: O Guia Prático para Quem Não Tem Tempo” — estilo Moderno, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Atividade Física na Rotina: O Guia Prático para Quem Não Tem Tempo — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-13",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 6 - ATIVIDADE FISICA NA ROTINA.docx",
   "faq": [],
-  "coverCaption": "Atividade Física na Rotina: O Guia Prático para Quem Não Tem Tempo · composição radial focus · claridade limpa",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Moderno, iluminação claridade limpa, textura granulado fino, enquadramento corte diagonal, motivo visual geometria vital.",
+  "coverCaption": "Foto: Direct Media / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo/featured.webp",
     "og": "/images/covers/atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo/share.webp"
   },
   "coverMeta": {
-    "style": "Moderno",
+    "style": "Fotografia Realista",
     "layout": "radial-focus",
     "sentiment": "energizante",
     "keywords": [
@@ -85,8 +85,11 @@
     ],
     "lighting": "claridade limpa",
     "motif": "geometria-vital",
-    "generatedAt": "2026-08-12T01:04:20.728Z",
+    "generatedAt": "2026-08-12T04:55:02.013Z",
     "seed": 4095699452,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Direct Media",
+    "creditUrl": "https://stocksnap.io/photo/senior-running-0BBVHS6DTT",
+    "source": "Openverse"
   }
 }

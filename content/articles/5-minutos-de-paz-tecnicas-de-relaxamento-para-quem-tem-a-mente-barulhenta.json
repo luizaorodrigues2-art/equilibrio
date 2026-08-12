@@ -19,7 +19,7 @@
     "paz"
   ],
   "coverImage": "/images/covers/5-minutos-de-paz-tecnicas-de-relaxamento-para-quem-tem-a-mente-barulhenta/home.webp",
-  "coverAlt": "Capa editorial do artigo “5 Minutos de paz: técnicas de relaxamento para quem tem a mente barulhenta” — estilo Espiritualidade, atmosfera acolhedor, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "5 Minutos de paz: técnicas de relaxamento para quem tem a mente barulhenta — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-02-05",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 2 - 5 MINUTOS DE PAZ.docx",
   "faq": [],
-  "coverCaption": "5 Minutos de paz: técnicas de relaxamento para quem tem a mente barulhenta · composição asymmetric frame · luz lateral dourada",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Espiritualidade, iluminação luz lateral dourada, textura vidro fosco, enquadramento profundidade em camadas, motivo visual arcos respiratorios.",
+  "coverCaption": "Foto: Jay10092006 / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: Jay10092006 / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/5-minutos-de-paz-tecnicas-de-relaxamento-para-quem-tem-a-mente-barulhenta/featured.webp",
     "og": "/images/covers/5-minutos-de-paz-tecnicas-de-relaxamento-para-quem-tem-a-mente-barulhenta/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/5-minutos-de-paz-tecnicas-de-relaxamento-para-quem-tem-a-mente-barulhenta/share.webp"
   },
   "coverMeta": {
-    "style": "Espiritualidade",
+    "style": "Fotografia Realista",
     "layout": "asymmetric-frame",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,8 +87,11 @@
     ],
     "lighting": "luz lateral dourada",
     "motif": "arcos-respiratorios",
-    "generatedAt": "2026-08-12T01:04:11.190Z",
+    "generatedAt": "2026-08-12T04:54:37.134Z",
     "seed": 1778413533,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Jay10092006",
+    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=182908092",
+    "source": "Openverse"
   }
 }

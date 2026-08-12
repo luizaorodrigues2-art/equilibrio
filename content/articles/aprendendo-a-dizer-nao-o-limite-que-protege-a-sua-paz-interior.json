@@ -17,7 +17,7 @@
     "paz"
   ],
   "coverImage": "/images/covers/aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior/home.webp",
-  "coverAlt": "Capa editorial do artigo “Aprendendo a dizer \"Não\": o limite que protege a sua paz interior” — estilo Natureza, atmosfera energizante, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "Aprendendo a dizer \"Não\": o limite que protege a sua paz interior — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-03-22",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -55,8 +55,8 @@
   ],
   "sourceFile": "ARTIGO 7 - APRENDENDO A DIZER NÃO.docx",
   "faq": [],
-  "coverCaption": "Aprendendo a dizer \"Não\": o limite que protege a sua paz interior · composição centered orb · halo espiritual",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Natureza, iluminação halo espiritual, textura água translúcida, enquadramento centralidade forte, motivo visual halo contemplativo.",
+  "coverCaption": "Foto: Vishnumishra07 / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: Vishnumishra07 / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior/featured.webp",
     "og": "/images/covers/aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior/og.webp",
@@ -66,7 +66,7 @@
     "share": "/images/covers/aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior/share.webp"
   },
   "coverMeta": {
-    "style": "Natureza",
+    "style": "Fotografia Realista",
     "layout": "centered-orb",
     "sentiment": "energizante",
     "keywords": [
@@ -83,8 +83,11 @@
     ],
     "lighting": "halo espiritual",
     "motif": "halo-contemplativo",
-    "generatedAt": "2026-08-12T01:04:18.911Z",
+    "generatedAt": "2026-08-12T04:54:57.080Z",
     "seed": 3821306,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Vishnumishra07",
+    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=179443395",
+    "source": "Openverse"
   }
 }

@@ -20,7 +20,7 @@
     "intestino-cerebro"
   ],
   "coverImage": "/images/covers/a-conexao-intestino-cerebro-o-eixo-transmissor-da-saude-fisica/home.webp",
-  "coverAlt": "Capa editorial do artigo “A Conexão Intestino-Cérebro: O Eixo Transmissor da Saúde Física” — estilo Corpo, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
+  "coverAlt": "A Conexão Intestino-Cérebro: O Eixo Transmissor da Saúde Física — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-01-27",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 10 - A CONEXÃO INTISTINO-CELEBRO.docx",
   "faq": [],
-  "coverCaption": "A Conexão Intestino-Cérebro: O Eixo Transmissor da Saúde Física · composição magazine left · penumbra serena",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Corpo, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual formas organicas.",
+  "coverCaption": "Foto: Direct Media / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/a-conexao-intestino-cerebro-o-eixo-transmissor-da-saude-fisica/featured.webp",
     "og": "/images/covers/a-conexao-intestino-cerebro-o-eixo-transmissor-da-saude-fisica/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/a-conexao-intestino-cerebro-o-eixo-transmissor-da-saude-fisica/share.webp"
   },
   "coverMeta": {
-    "style": "Corpo",
+    "style": "Fotografia Realista",
     "layout": "magazine-left",
     "sentiment": "acolhedor",
     "keywords": [
@@ -85,8 +85,11 @@
     ],
     "lighting": "penumbra serena",
     "motif": "formas-organicas",
-    "generatedAt": "2026-08-12T01:04:13.360Z",
+    "generatedAt": "2026-08-12T04:54:44.847Z",
     "seed": 3708968697,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Direct Media",
+    "creditUrl": "https://stocksnap.io/photo/fitness-male-CWWCRACUJ6",
+    "source": "Openverse"
   }
 }

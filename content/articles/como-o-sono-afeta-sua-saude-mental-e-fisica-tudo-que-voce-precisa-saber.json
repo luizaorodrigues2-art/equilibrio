@@ -17,7 +17,7 @@
     "sono"
   ],
   "coverImage": "/images/covers/como-o-sono-afeta-sua-saude-mental-e-fisica-tudo-que-voce-precisa-saber/home.webp",
-  "coverAlt": "Capa editorial do artigo “Como o Sono Afeta Sua Saúde Mental e Física: Tudo Que Você Precisa Saber” — estilo Mente, atmosfera reflexivo, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "Como o Sono Afeta Sua Saúde Mental e Física: Tudo Que Você Precisa Saber — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-02-14",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -55,8 +55,8 @@
   ],
   "sourceFile": "ARTIGO 3 - COMO O SONO AFETA SUA SAUDE MENTAL E FISICA.docx",
   "faq": [],
-  "coverCaption": "Como o Sono Afeta Sua Saúde Mental e Física: Tudo Que Você Precisa Saber · composição asymmetric frame · luz lateral dourada",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Mente, iluminação luz lateral dourada, textura vidro fosco, enquadramento profundidade em camadas, motivo visual lua e ondas.",
+  "coverCaption": "Foto: Healthy Living / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Healthy Living / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/como-o-sono-afeta-sua-saude-mental-e-fisica-tudo-que-voce-precisa-saber/featured.webp",
     "og": "/images/covers/como-o-sono-afeta-sua-saude-mental-e-fisica-tudo-que-voce-precisa-saber/og.webp",
@@ -66,7 +66,7 @@
     "share": "/images/covers/como-o-sono-afeta-sua-saude-mental-e-fisica-tudo-que-voce-precisa-saber/share.webp"
   },
   "coverMeta": {
-    "style": "Mente",
+    "style": "Fotografia Realista",
     "layout": "asymmetric-frame",
     "sentiment": "reflexivo",
     "keywords": [
@@ -83,8 +83,11 @@
     ],
     "lighting": "luz lateral dourada",
     "motif": "lua-e-ondas",
-    "generatedAt": "2026-08-12T01:04:24.237Z",
+    "generatedAt": "2026-08-12T04:55:06.874Z",
     "seed": 1348724733,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Healthy Living",
+    "creditUrl": "https://stocksnap.io/photo/people-woman-IX4W28VSKO",
+    "source": "Openverse"
   }
 }
