@@ -1,0 +1,48 @@
+name: Gerar capas reais (Pexels)
+
+# Gera fotografias reais para as capas de todos os artigos e faz commit
+# do resultado. Rode manualmente na aba "Actions" (Run workflow) OU será
+# disparado automaticamente. Requer o secret PEXELS_API_KEY.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gerar-capas
+  cancel-in-progress: false
+
+jobs:
+  capas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Gerar capas com fotografia real
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: npm run covers
+
+      - name: Commit e push das capas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/images/covers content
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração de capa para commitar."
+          else
+            git commit -m "Capas reais geradas via Pexels [skip ci]"
+            git push
+          fi
