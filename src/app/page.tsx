@@ -32,7 +32,7 @@ export default function HomePage() {
     <div className="cinema">
       <AmbientPointer />
       <SocialRail />
-      <HomeHero />
+      <HomeHero featured={featured} />
 
       <div className="cinema-container" style={{ paddingBlock: "0.75rem 0.5rem" }}>
         <Reveal>

@@ -2497,3 +2497,93 @@ body.site-cinema .cta-assine--mobile {
     font-size: 0.88rem;
   }
 }
+
+/* ============================================================
+   Destaque do Dia — no Hero, acima do eyebrow "SAÚDE INTEGRAL"
+   Discreto, glassmorphism, não altera fundo nem layout do hero.
+   ============================================================ */
+.cinema-daily {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 30rem;
+  margin-bottom: 1.15rem;
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(10, 37, 64, 0.34);
+  border: 1px solid rgba(201, 169, 110, 0.28);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cinemaDailyIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+  transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+.cinema-daily:hover {
+  border-color: rgba(232, 196, 124, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.4);
+}
+@keyframes cinemaDailyIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.cinema-daily__thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+.cinema-daily__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.cinema-daily__eyebrow {
+  font-size: 0.64rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cin-gold, #E8C47C);
+}
+.cinema-daily__title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 1.02rem;
+  line-height: 1.2;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cinema-daily__meta {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+.cinema-daily__go {
+  flex-shrink: 0;
+  align-self: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cin-gold, #E8C47C);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .cinema-daily {
+    max-width: 100%;
+    gap: 0.7rem;
+    padding: 0.55rem 0.8rem 0.55rem 0.55rem;
+  }
+  .cinema-daily__go { display: none; }
+  .cinema-daily__thumb { width: 52px; height: 52px; }
+  .cinema-daily__title { font-size: 0.95rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinema-daily { animation: none; opacity: 1; transform: none; }
+}

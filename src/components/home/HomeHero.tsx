@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ArticleSummary } from "@/lib/types";
 import { MagneticButton } from "@/components/cinema/MagneticButton";
 
 const themes = [
@@ -35,7 +36,14 @@ const themes = [
   },
 ];
 
-export function HomeHero() {
+export function HomeHero({ featured }: { featured?: ArticleSummary | null }) {
+  const cover =
+    featured?.coverVariants?.thumb ||
+    featured?.coverVariants?.home ||
+    featured?.coverImage ||
+    "";
+  const coverUnoptimized = cover.endsWith(".svg") || cover.includes("/api/");
+
   return (
     <section className="cinema-hero" aria-label="Experiência principal">
       <div className="cinema-hero__bg" />
@@ -64,6 +72,38 @@ export function HomeHero() {
       <div className="cinema-hero__content">
         <div className="cinema-hero__layout">
           <div className="cinema-hero__copy">
+            {featured && (
+              <Link
+                href={`/artigos/${featured.slug}`}
+                className="cinema-daily"
+                aria-label={`Destaque do dia: ${featured.title}`}
+              >
+                {cover && (
+                  <span className="cinema-daily__thumb">
+                    <Image
+                      src={cover}
+                      alt=""
+                      fill
+                      sizes="64px"
+                      style={{ objectFit: "cover" }}
+                      unoptimized={coverUnoptimized}
+                    />
+                  </span>
+                )}
+                <span className="cinema-daily__body">
+                  <span className="cinema-daily__eyebrow">Destaque do Dia</span>
+                  <span className="cinema-daily__title">{featured.title}</span>
+                  <span className="cinema-daily__meta">
+                    {featured.readingTime} min de leitura
+                    <span aria-hidden="true"> · </span>
+                    {featured.category}
+                  </span>
+                </span>
+                <span className="cinema-daily__go" aria-hidden="true">
+                  Ler artigo →
+                </span>
+              </Link>
+            )}
             <p className="cinema-eyebrow">SAÚDE INTEGRAL · Espiritual · Mental · Corpo</p>
             <h1 className="cinema-title">
               Equilíbrio que <em>transforma.</em>

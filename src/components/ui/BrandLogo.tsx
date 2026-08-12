@@ -8,24 +8,27 @@ type BrandLogoProps = {
   className?: string;
 };
 
+/** Emblema transparente (fundo removido) — integra ao header/footer escuros. */
+const LOGO_MARK = "/assets/brand/logo-mark.png";
+
 const sizes = {
-  sm: { w: 148, h: 52 },
-  md: { w: 200, h: 70 },
-  lg: { w: 280, h: 98 },
+  sm: 68,
+  md: 96,
+  lg: 132,
 };
 
 export function BrandLogo({ href = "/", size = "md", className = "" }: BrandLogoProps) {
   const dim = sizes[size];
   const content = (
-    <span className={`brand-logo ${className}`.trim()}>
+    <span className={`brand-logo brand-logo--${size} ${className}`.trim()}>
       <Image
-        src={siteConfig.logo}
+        src={LOGO_MARK}
         alt={siteConfig.name}
-        width={dim.w}
-        height={dim.h}
+        width={dim}
+        height={dim}
         className="brand-logo__mark"
         priority={size !== "lg"}
-        style={{ width: dim.w, height: "auto", maxHeight: dim.h, objectFit: "contain" }}
+        style={{ width: "auto", height: dim, maxHeight: dim, objectFit: "contain" }}
       />
     </span>
   );
