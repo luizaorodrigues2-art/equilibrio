@@ -20,7 +20,7 @@
     "relacionamentos"
   ],
   "coverImage": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/home.webp",
-  "coverAlt": "Capa editorial do artigo “Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral” — estilo Cinema, atmosfera energizante, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-03-04",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 5 - ALIMENTAÇÃO E BEM ESTAR.docx",
   "faq": [],
-  "coverCaption": "Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral · composição magazine left · penumbra serena",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Cinema, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual linhas mentais.",
+  "coverCaption": "Foto: Altered Reality / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Altered Reality / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/featured.webp",
     "og": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/share.webp"
   },
   "coverMeta": {
-    "style": "Cinema",
+    "style": "Fotografia Realista",
     "layout": "magazine-left",
     "sentiment": "energizante",
     "keywords": [
@@ -89,8 +89,11 @@
     ],
     "lighting": "penumbra serena",
     "motif": "linhas-mentais",
-    "generatedAt": "2026-08-12T05:00:00.785Z",
+    "generatedAt": "2026-08-12T05:04:48.651Z",
     "seed": 1180244977,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "Altered Reality",
+    "creditUrl": "https://stocksnap.io/photo/young-woman-YRE7TNGEOW",
+    "source": "Openverse"
   }
 }

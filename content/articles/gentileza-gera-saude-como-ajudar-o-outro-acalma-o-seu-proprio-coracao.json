@@ -18,7 +18,7 @@
     "gentileza"
   ],
   "coverImage": "/images/covers/gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao/home.webp",
-  "coverAlt": "Capa editorial do artigo “Gentileza gera saúde: como ajudar o outro acalma o seu próprio coração” — estilo Natureza, atmosfera energizante, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "Gentileza gera saúde: como ajudar o outro acalma o seu próprio coração — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-04-15",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 9 -GENTILEZA GERA SAUDE.docx",
   "faq": [],
-  "coverCaption": "Gentileza gera saúde: como ajudar o outro acalma o seu próprio coração · composição soft grid · claridade limpa",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Natureza, iluminação claridade limpa, textura granulado fino, enquadramento corte diagonal, motivo visual halo contemplativo.",
+  "coverCaption": "Foto: Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: Openverse.",
   "coverVariants": {
     "featured": "/images/covers/gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao/featured.webp",
     "og": "/images/covers/gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao/share.webp"
   },
   "coverMeta": {
-    "style": "Natureza",
+    "style": "Fotografia Realista",
     "layout": "soft-grid",
     "sentiment": "energizante",
     "keywords": [
@@ -85,8 +85,11 @@
     ],
     "lighting": "claridade limpa",
     "motif": "halo-contemplativo",
-    "generatedAt": "2026-08-12T05:00:28.039Z",
+    "generatedAt": "2026-08-12T05:05:17.794Z",
     "seed": 437088164,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "",
+    "creditUrl": "https://svgsilh.com/ms/image/2009201.html",
+    "source": "Openverse"
   }
 }

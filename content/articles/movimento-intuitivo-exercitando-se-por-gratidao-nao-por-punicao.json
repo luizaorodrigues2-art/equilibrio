@@ -20,7 +20,7 @@
     "rotina"
   ],
   "coverImage": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/home.webp",
-  "coverAlt": "Capa editorial do artigo “Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição” — estilo Saúde, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-01",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 4 - MOVIMENTO INTUITIVO.docx",
   "faq": [],
-  "coverCaption": "Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição · composição portrait band · halo espiritual",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Saúde, iluminação halo espiritual, textura água translúcida, enquadramento centralidade forte, motivo visual silhueta movimento.",
+  "coverCaption": "Foto: VinothChandar / Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: VinothChandar / Openverse.",
   "coverVariants": {
     "featured": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/featured.webp",
     "og": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/share.webp"
   },
   "coverMeta": {
-    "style": "Saúde",
+    "style": "Fotografia Realista",
     "layout": "portrait-band",
     "sentiment": "acolhedor",
     "keywords": [
@@ -89,8 +89,11 @@
     ],
     "lighting": "halo espiritual",
     "motif": "silhueta-movimento",
-    "generatedAt": "2026-08-12T05:00:37.823Z",
+    "generatedAt": "2026-08-12T05:05:30.497Z",
     "seed": 1194798250,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "VinothChandar",
+    "creditUrl": "https://www.flickr.com/photos/44345361@N06/4459777970",
+    "source": "Openverse"
   }
 }

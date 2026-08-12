@@ -20,7 +20,7 @@
     "longevidade"
   ],
   "coverImage": "/images/covers/longevidade-o-segredo-para-uma-vida-longa-e-saudavel/home.webp",
-  "coverAlt": "Capa editorial do artigo “Longevidade: O Segredo para uma Vida Longa e Saudável” — estilo Contemporâneo, atmosfera acolhedor, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "Longevidade: O Segredo para uma Vida Longa e Saudável — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-04-09",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 9 -  LONGIVIDADE.docx",
   "faq": [],
-  "coverCaption": "Longevidade: O Segredo para uma Vida Longa e Saudável · composição waves horizon · halo espiritual",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Contemporâneo, iluminação halo espiritual, textura água translúcida, enquadramento centralidade forte, motivo visual estrutura articular.",
+  "coverCaption": "Foto: Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Openverse.",
   "coverVariants": {
     "featured": "/images/covers/longevidade-o-segredo-para-uma-vida-longa-e-saudavel/featured.webp",
     "og": "/images/covers/longevidade-o-segredo-para-uma-vida-longa-e-saudavel/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/longevidade-o-segredo-para-uma-vida-longa-e-saudavel/share.webp"
   },
   "coverMeta": {
-    "style": "Contemporâneo",
+    "style": "Fotografia Realista",
     "layout": "waves-horizon",
     "sentiment": "acolhedor",
     "keywords": [
@@ -89,8 +89,11 @@
     ],
     "lighting": "halo espiritual",
     "motif": "estrutura-articular",
-    "generatedAt": "2026-08-12T05:00:32.929Z",
+    "generatedAt": "2026-08-12T05:05:24.233Z",
     "seed": 3524391498,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "",
+    "creditUrl": "https://svgsilh.com/ms/3f51b5/image/2009201.html",
+    "source": "Openverse"
   }
 }

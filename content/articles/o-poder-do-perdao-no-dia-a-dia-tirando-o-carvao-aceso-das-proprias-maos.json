@@ -18,7 +18,7 @@
     "perdao"
   ],
   "coverImage": "/images/covers/o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos/home.webp",
-  "coverAlt": "Capa editorial do artigo “O poder do perdão no dia a dia: tirando o carvão aceso das próprias mãos” — estilo Luxo, atmosfera energizante, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "O poder do perdão no dia a dia: tirando o carvão aceso das próprias mãos — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-03-31",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 8 - O PODER DO PERDÃO NO DIA A DIA.docx",
   "faq": [],
-  "coverCaption": "O poder do perdão no dia a dia: tirando o carvão aceso das próprias mãos · composição split diagonal · luz lateral dourada",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Luxo, iluminação luz lateral dourada, textura vidro fosco, enquadramento profundidade em camadas, motivo visual halo contemplativo.",
+  "coverCaption": "Foto: Openverse",
+  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: Openverse.",
   "coverVariants": {
     "featured": "/images/covers/o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos/featured.webp",
     "og": "/images/covers/o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos/share.webp"
   },
   "coverMeta": {
-    "style": "Luxo",
+    "style": "Fotografia Realista",
     "layout": "split-diagonal",
     "sentiment": "energizante",
     "keywords": [
@@ -85,8 +85,11 @@
     ],
     "lighting": "luz lateral dourada",
     "motif": "halo-contemplativo",
-    "generatedAt": "2026-08-12T05:00:45.360Z",
+    "generatedAt": "2026-08-12T05:05:38.610Z",
     "seed": 1165925285,
-    "engine": "equilibrio-cover-ai-v1"
+    "engine": "equilibrio-cover-photo-v1",
+    "credit": "",
+    "creditUrl": "https://svgsilh.com/ms/03a9f4/image/2009201.html",
+    "source": "Openverse"
   }
 }
