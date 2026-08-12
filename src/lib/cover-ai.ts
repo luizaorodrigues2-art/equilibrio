@@ -733,7 +733,7 @@ async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandida
       const res = await fetch(
         `https://api.openverse.org/v1/images/?q=${encodeURIComponent(
           q
-        )}&license_type=commercial&mature=false&page_size=30`,
+        )}&license_type=commercial&mature=false&page_size=20`,
         { headers: { "User-Agent": FETCH_UA, Accept: "application/json" } }
       );
       if (!res.ok) continue;
