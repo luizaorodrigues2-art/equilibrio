@@ -661,7 +661,7 @@ type OpenverseImage = {
 
 /** Bloqueia fotos fora do universo do blog (bandeira, política, violência, etc.). */
 const PHOTO_BLOCKLIST =
-  /\b(flag|bandeira|president|politic|pol[íi]tica|government|governo|protest|war|guerra|militar|military|army|soldier|weapon|gun|arma|election|elei[çc][ãa]o|parliament|senate|minister|congress|nazi|communis|trump|biden|bolsonaro|lula|police|pol[íi]cia|crime|riot|terror)/i;
+  /\b(flag|bandeira|president|politic|pol[íi]tica|government|governo|protest|war|guerra|militar|military|army|soldier|weapon|gun|arma|election|elei[çc][ãa]o|parliament|senate|minister|congress|nazi|communis|trump|biden|bolsonaro|lula|police|pol[íi]cia|crime|riot|terror|chalkboard|blackboard|whiteboard|signboard|placard|watermark|placeholder|lorem|logo|clipart|screenshot)/i;
 
 function isBlockedPhoto(title?: string, tags?: { name: string }[]): boolean {
   const blob = `${title || ""} ${(tags || []).map((t) => t.name).join(" ")}`;
@@ -679,7 +679,7 @@ const CURATED_QUERIES: Record<string, string> = {
   "alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral":
     "healthy colorful food bowl vegetables",
   "aprendendo-a-dizer-nao-o-limite-que-protege-a-sua-paz-interior":
-    "calm peaceful woman serene",
+    "calm confident woman nature",
   "atividade-fisica-na-rotina-o-guia-pratico-para-quem-nao-tem-tempo":
     "person home workout exercise",
   "autocuidado-na-pratica-10-habitos-simples-para-transformar-sua-rotina":
@@ -693,13 +693,13 @@ const CURATED_QUERIES: Record<string, string> = {
   "desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente":
     "detox water lemon fresh herbs",
   "detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma":
-    "person relaxing nature no phone",
+    "reading book relaxing nature",
   "espiritualidade-na-cozinha-o-poder-de-comer-prestando-atencao":
     "mindful eating healthy meal table",
   "estresse-no-dia-a-dia-como-reconhecer-os-sinais-e-agir-antes-que-vire-um-problem":
     "woman relaxing breathing stress relief",
   "gentileza-gera-saude-como-ajudar-o-outro-acalma-o-seu-proprio-coracao":
-    "kindness helping hands people",
+    "volunteers helping people community",
   "hidratacao-profunda-a-agua-como-purificadora-das-celulas":
     "glass of water hydration fresh",
   "longevidade-o-segredo-para-uma-vida-longa-e-saudavel":
@@ -713,9 +713,9 @@ const CURATED_QUERIES: Record<string, string> = {
   "o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao":
     "gratitude journal writing coffee",
   "o-poder-do-perdao-no-dia-a-dia-tirando-o-carvao-aceso-das-proprias-maos":
-    "peaceful serene woman calm",
+    "peaceful woman sunset serene",
   "o-que-e-bem-estar-entenda-o-conceito-e-por-que-ele-importa":
-    "wellbeing balance calm nature",
+    "woman relaxing wellbeing nature",
   "o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador":
     "restful sleep peaceful bedroom",
   "o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital":
