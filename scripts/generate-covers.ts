@@ -11,9 +11,31 @@ const ROOT = path.join(__dirname, "..");
 const ARTICLES_DIR = path.join(ROOT, "content", "articles");
 const INDEX_PATH = path.join(ROOT, "content", "index.json");
 
+/** Carrega variáveis de .env.local / .env (ex.: PEXELS_API_KEY) para o script. */
+(function loadEnvLocal() {
+  for (const file of [".env.local", ".env"]) {
+    try {
+      const txt = fs.readFileSync(path.join(ROOT, file), "utf-8");
+      for (const line of txt.split(/\r?\n/)) {
+        const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+        if (m && !process.env[m[1]]) {
+          process.env[m[1]] = m[2].replace(/^["']|["']$/g, "").trim();
+        }
+      }
+    } catch {
+      /* arquivo ausente — segue */
+    }
+  }
+})();
+
 async function main() {
   const files = fs.readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"));
-  console.log(`Gerando capas para ${files.length} artigos...`);
+  const hasKey = Boolean((process.env.PEXELS_API_KEY || "").trim());
+  console.log(
+    hasKey
+      ? `Gerando capas com FOTOGRAFIA REAL (Pexels) para ${files.length} artigos...`
+      : `⚠ PEXELS_API_KEY não encontrada — usando arte de fallback. Configure a chave em .env.local para fotos reais. (${files.length} artigos)`
+  );
 
   const summaries = [];
 
