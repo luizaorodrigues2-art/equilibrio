@@ -32,9 +32,8 @@ async function main() {
   const files = fs.readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".json"));
   const hasKey = Boolean((process.env.PEXELS_API_KEY || "").trim());
   console.log(
-    hasKey
-      ? `Gerando capas com FOTOGRAFIA REAL (Pexels) para ${files.length} artigos...`
-      : `⚠ PEXELS_API_KEY não encontrada — usando arte de fallback. Configure a chave em .env.local para fotos reais. (${files.length} artigos)`
+    `Gerando capas com FOTOGRAFIA REAL para ${files.length} artigos ` +
+      `(fonte: ${hasKey ? "Pexels" : "Openverse — sem chave"})...`
   );
 
   const summaries = [];

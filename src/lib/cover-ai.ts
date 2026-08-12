@@ -632,12 +632,30 @@ async function generateArtCoverPackage(
    única por artigo, com tratamento escuro do site.
    ============================================================ */
 
+/** Candidato de foto normalizado (independente da fonte). */
+type PhotoCandidate = {
+  id: string;
+  downloadUrl: string;
+  credit: string;
+  creditUrl: string;
+  source: string;
+};
+
 type PexelsPhoto = {
   id: number;
   photographer: string;
   photographer_url: string;
   alt?: string;
   src: { original: string; large2x: string; large: string; landscape: string };
+};
+
+type OpenverseImage = {
+  id: string;
+  title?: string;
+  url: string;
+  creator?: string;
+  creator_url?: string;
+  foreign_landing_url?: string;
 };
 
 /** Consultas de imagem, do específico (motivo do texto) ao geral (missão). */
@@ -667,12 +685,15 @@ function buildPhotoQueries(brief: CoverBrief, categorySlug: string): string[] {
   return [...new Set(list)];
 }
 
+const FETCH_UA = "Mozilla/5.0 (compatible; equilibrio-cover-bot/1.0)";
+
+/** Pexels (requer PEXELS_API_KEY) → candidatos normalizados. */
 async function fetchPexelsCandidates(
   queries: string[],
   apiKey: string
-): Promise<PexelsPhoto[]> {
-  const seen = new Set<number>();
-  const out: PexelsPhoto[] = [];
+): Promise<PhotoCandidate[]> {
+  const seen = new Set<string>();
+  const out: PhotoCandidate[] = [];
   for (const q of queries) {
     try {
       const res = await fetch(
@@ -684,10 +705,16 @@ async function fetchPexelsCandidates(
       if (!res.ok) continue;
       const data = (await res.json()) as { photos?: PexelsPhoto[] };
       for (const p of data.photos || []) {
-        if (!seen.has(p.id)) {
-          seen.add(p.id);
-          out.push(p);
-        }
+        const id = String(p.id);
+        if (seen.has(id)) continue;
+        seen.add(id);
+        out.push({
+          id,
+          downloadUrl: p.src.large2x || p.src.original || p.src.large,
+          credit: p.photographer || "",
+          creditUrl: p.photographer_url || "",
+          source: "Pexels",
+        });
       }
       if (out.length >= 24) break;
     } catch {
@@ -695,6 +722,46 @@ async function fetchPexelsCandidates(
     }
   }
   return out;
+}
+
+/** Openverse (banco de imagens livres, SEM chave) → candidatos normalizados. */
+async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandidate[]> {
+  const seen = new Set<string>();
+  const out: PhotoCandidate[] = [];
+  for (const q of queries) {
+    try {
+      const res = await fetch(
+        `https://api.openverse.org/v1/images/?q=${encodeURIComponent(
+          q
+        )}&license_type=commercial&aspect_ratio=wide&size=large&mature=false&page_size=20`,
+        { headers: { "User-Agent": FETCH_UA, Accept: "application/json" } }
+      );
+      if (!res.ok) continue;
+      const data = (await res.json()) as { results?: OpenverseImage[] };
+      for (const r of data.results || []) {
+        if (!r.url || seen.has(r.id)) continue;
+        seen.add(r.id);
+        out.push({
+          id: r.id,
+          downloadUrl: r.url,
+          credit: r.creator || "",
+          creditUrl: r.foreign_landing_url || r.creator_url || "",
+          source: "Openverse",
+        });
+      }
+      if (out.length >= 24) break;
+    } catch {
+      /* tenta a próxima consulta */
+    }
+  }
+  return out;
+}
+
+/** Baixa a imagem com User-Agent (alguns CDNs rejeitam sem UA). */
+async function downloadImage(url: string): Promise<Buffer> {
+  const res = await fetch(url, { headers: { "User-Agent": FETCH_UA } });
+  if (!res.ok) throw new Error(`download ${res.status}`);
+  return Buffer.from(await res.arrayBuffer());
 }
 
 /** Camada transparente: leve tint azul-marinho + gradiente para leitura. */
@@ -751,28 +818,17 @@ async function generatePhotoCoverPackage(
     Article,
     "slug" | "title" | "subtitle" | "excerpt" | "category" | "categorySlug" | "tags"
   > & { contentText?: string },
+  brief: CoverBrief,
+  candidates: PhotoCandidate[],
   options?: { forceSeed?: number; publicDir?: string }
 ): Promise<CoverPackage> {
-  const apiKey = (process.env.PEXELS_API_KEY || "").trim();
-  if (!apiKey) throw new Error("PEXELS_API_KEY ausente");
-
-  const brief = analyzeCoverBrief({
-    slug: article.slug,
-    title: article.title,
-    subtitle: article.subtitle,
-    excerpt: article.excerpt,
-    contentText: article.contentText,
-    category: article.category,
-    categorySlug: article.categorySlug,
-    tags: article.tags,
-    forceSeed: options?.forceSeed,
-  });
+  if (!candidates.length) throw new Error("Sem candidatos de foto");
 
   const publicDir = options?.publicDir || path.join(process.cwd(), "public");
   const projectRoot = path.dirname(publicDir);
   const mapPath = path.join(projectRoot, "content", "data", "cover-photos.json");
 
-  let photoMap: Record<string, number> = {};
+  let photoMap: Record<string, string> = {};
   try {
     photoMap = JSON.parse(fs.readFileSync(mapPath, "utf-8"));
   } catch {
@@ -781,30 +837,27 @@ async function generatePhotoCoverPackage(
   const usedByOthers = new Set(
     Object.entries(photoMap)
       .filter(([slug]) => slug !== article.slug)
-      .map(([, id]) => id)
+      .map(([, id]) => String(id))
   );
 
-  const candidates = await fetchPexelsCandidates(
-    buildPhotoQueries(brief, article.categorySlug || ""),
-    apiKey
-  );
-  if (!candidates.length) throw new Error("Pexels não retornou resultados");
-
-  // Escolha determinística (estável por artigo) e única (sem repetir foto).
+  // Escolha determinística (estável por artigo) e única; baixa a 1ª que funcionar.
   const start = brief.seed % candidates.length;
-  let chosen: PexelsPhoto | null = null;
-  for (let i = 0; i < candidates.length; i++) {
-    const c = candidates[(start + i) % candidates.length];
-    if (!usedByOthers.has(c.id)) {
-      chosen = c;
+  const ordered = candidates
+    .map((_, i) => candidates[(start + i) % candidates.length])
+    .sort((a, b) => Number(usedByOthers.has(a.id)) - Number(usedByOthers.has(b.id)));
+
+  let chosen: PhotoCandidate | null = null;
+  let photoBuffer: Buffer | null = null;
+  for (const cand of ordered) {
+    try {
+      photoBuffer = await downloadImage(cand.downloadUrl);
+      chosen = cand;
       break;
+    } catch {
+      /* tenta o próximo candidato */
     }
   }
-  if (!chosen) chosen = candidates[start];
-
-  const dl = await fetch(chosen.src.large2x || chosen.src.original || chosen.src.large);
-  if (!dl.ok) throw new Error(`Falha ao baixar a foto (${dl.status})`);
-  const photoBuffer = Buffer.from(await dl.arrayBuffer());
+  if (!chosen || !photoBuffer) throw new Error("Nenhuma foto pôde ser baixada");
 
   const outDir = path.join(publicDir, "images", "covers", article.slug);
   fs.mkdirSync(outDir, { recursive: true });
@@ -859,9 +912,9 @@ async function generatePhotoCoverPackage(
   const coverAlt = `${article.title} — fotografia editorial sobre ${article.category}${
     kw ? `, relacionada a ${kw}` : ""
   }`;
-  const credit = chosen.photographer
-    ? `Foto: ${chosen.photographer} / Pexels`
-    : "Foto: Pexels";
+  const credit = chosen.credit
+    ? `Foto: ${chosen.credit} / ${chosen.source}`
+    : `Foto: ${chosen.source}`;
 
   return {
     coverImage: variants.home,
@@ -879,17 +932,17 @@ async function generatePhotoCoverPackage(
       generatedAt: new Date().toISOString(),
       seed: brief.seed,
       engine: "equilibrio-cover-photo-v1",
-      credit: chosen.photographer,
-      creditUrl: chosen.photographer_url,
-      source: "Pexels",
+      credit: chosen.credit,
+      creditUrl: chosen.creditUrl,
+      source: chosen.source,
     },
   };
 }
 
 /**
- * Gera a capa do artigo. Prioriza FOTOGRAFIA REAL (Pexels) quando há
- * PEXELS_API_KEY configurada; caso contrário (ou em falha de rede),
- * usa a arte gerada como fallback para nunca quebrar a publicação.
+ * Gera a capa do artigo com FOTOGRAFIA REAL e contextual.
+ * Fontes, em ordem: Pexels (se houver PEXELS_API_KEY) → Openverse (sem chave).
+ * Se nenhuma foto puder ser obtida, cai na arte gerada (nunca quebra).
  */
 export async function generateCoverPackage(
   article: Pick<
@@ -898,16 +951,34 @@ export async function generateCoverPackage(
   > & { contentText?: string },
   options?: { forceSeed?: number; publicDir?: string }
 ): Promise<CoverPackage> {
-  if ((process.env.PEXELS_API_KEY || "").trim()) {
-    try {
-      return await generatePhotoCoverPackage(article, options);
-    } catch (err) {
-      console.warn(
-        `[cover] Foto real indisponível para "${article.slug}" (${
-          (err as Error).message
-        }). Usando arte de fallback.`
-      );
+  const brief = analyzeCoverBrief({
+    slug: article.slug,
+    title: article.title,
+    subtitle: article.subtitle,
+    excerpt: article.excerpt,
+    contentText: article.contentText,
+    category: article.category,
+    categorySlug: article.categorySlug,
+    tags: article.tags,
+    forceSeed: options?.forceSeed,
+  });
+  const queries = buildPhotoQueries(brief, article.categorySlug || "");
+
+  try {
+    const apiKey = (process.env.PEXELS_API_KEY || "").trim();
+    let candidates: PhotoCandidate[] = [];
+    if (apiKey) candidates = await fetchPexelsCandidates(queries, apiKey);
+    if (!candidates.length) candidates = await fetchOpenverseCandidates(queries);
+    if (candidates.length) {
+      return await generatePhotoCoverPackage(article, brief, candidates, options);
     }
+    console.warn(`[cover] Sem fotos para "${article.slug}". Usando arte de fallback.`);
+  } catch (err) {
+    console.warn(
+      `[cover] Foto real indisponível para "${article.slug}" (${
+        (err as Error).message
+      }). Usando arte de fallback.`
+    );
   }
   return generateArtCoverPackage(article, options);
 }
