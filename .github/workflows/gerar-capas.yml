@@ -32,7 +32,7 @@ jobs:
 
       - name: Gerar capas com fotografia real
         env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY || vars.PEXELS_API_KEY }}
         run: npm run covers
 
       - name: Commit e push das capas
