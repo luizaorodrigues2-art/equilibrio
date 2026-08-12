@@ -29,7 +29,9 @@ body.site-cinema,
   --cin-copper-dark: #8f5a28;
 
   /* Semantic */
-  --cin-bg: var(--cin-black);
+  /* Fundo geral: azul-marinho sereno da marca (mais claro/vivo que o preto,
+     mantendo o texto claro legível). Só a cor do fundo mudou. */
+  --cin-bg: var(--cin-midnight);
   --cin-bg-elevated: var(--cin-navy-deep);
   --cin-bg-surface: var(--cin-navy-petroleum);
   --cin-text: var(--cin-white-soft);
@@ -594,13 +596,17 @@ body.site-cinema .logo-mark,
 .cinema-themes-panel {
   position: relative;
   z-index: 2;
-  padding: 1.35rem 1.25rem 1.1rem;
+  width: 100%;
+  max-width: 340px;
+  margin-left: auto;
+  padding: 1rem 1rem 0.85rem;
   border-radius: var(--cin-radius);
-  background: rgba(7, 20, 34, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: var(--cin-shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  /* Mais transparente: deixa a imagem do Hero aparecer por trás */
+  background: rgba(7, 20, 34, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--cin-shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .cinema-themes-panel__title {
