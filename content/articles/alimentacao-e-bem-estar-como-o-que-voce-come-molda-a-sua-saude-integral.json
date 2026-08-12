@@ -22,7 +22,7 @@
   "coverImage": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/home.webp",
   "coverAlt": "Capa editorial do artigo “Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral” — estilo Cinema, atmosfera energizante, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-03-04",
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-08-12",
   "readingTime": 5,
   "featured": false,
   "status": "published",
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 5 - ALIMENTAÇÃO E BEM ESTAR.docx",
   "faq": [],
-  "coverCaption": "Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral · composição abstract layers · luz lateral dourada",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Cinema, iluminação luz lateral dourada, textura vidro fosco, enquadramento profundidade em camadas, motivo visual linhas mentais.",
+  "coverCaption": "Alimentação e Bem-Estar: Como o que Você Come Molda a Sua Saúde Integral · composição magazine left · penumbra serena",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Cinema, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual linhas mentais.",
   "coverVariants": {
     "featured": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/featured.webp",
     "og": "/images/covers/alimentacao-e-bem-estar-como-o-que-voce-come-molda-a-sua-saude-integral/og.webp",
@@ -73,7 +73,7 @@
   },
   "coverMeta": {
     "style": "Cinema",
-    "layout": "abstract-layers",
+    "layout": "magazine-left",
     "sentiment": "energizante",
     "keywords": [
       "mente",
@@ -85,12 +85,12 @@
       "rotina",
       "relacionamentos",
       "saude",
-      "parou"
+      "alimentos"
     ],
-    "lighting": "luz lateral dourada",
+    "lighting": "penumbra serena",
     "motif": "linhas-mentais",
-    "generatedAt": "2026-07-18T13:45:30.343Z",
-    "seed": 3964439221,
+    "generatedAt": "2026-08-12T00:56:16.105Z",
+    "seed": 1180244977,
     "engine": "equilibrio-cover-ai-v1"
   }
 }

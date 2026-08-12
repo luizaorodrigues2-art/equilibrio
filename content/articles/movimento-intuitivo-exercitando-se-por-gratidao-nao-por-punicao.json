@@ -20,9 +20,9 @@
     "rotina"
   ],
   "coverImage": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/home.webp",
-  "coverAlt": "Capa editorial do artigo “Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição” — estilo Lifestyle, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição” — estilo Saúde, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-01",
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-08-12",
   "readingTime": 5,
   "featured": false,
   "status": "published",
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 4 - MOVIMENTO INTUITIVO.docx",
   "faq": [],
-  "coverCaption": "Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição · composição portrait band · brilho matinal",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Lifestyle, iluminação brilho matinal, textura superfície polida, enquadramento close atmosférico, motivo visual silhueta movimento.",
+  "coverCaption": "Movimento Intuitivo: Exercitando-se por Gratidão, Não por Punição · composição portrait band · halo espiritual",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Saúde, iluminação halo espiritual, textura água translúcida, enquadramento centralidade forte, motivo visual silhueta movimento.",
   "coverVariants": {
     "featured": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/featured.webp",
     "og": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/movimento-intuitivo-exercitando-se-por-gratidao-nao-por-punicao/share.webp"
   },
   "coverMeta": {
-    "style": "Lifestyle",
+    "style": "Saúde",
     "layout": "portrait-band",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,10 +87,10 @@
       "nossa",
       "movimento"
     ],
-    "lighting": "brilho matinal",
+    "lighting": "halo espiritual",
     "motif": "silhueta-movimento",
-    "generatedAt": "2026-07-18T13:47:48.209Z",
-    "seed": 618520800,
+    "generatedAt": "2026-08-12T00:56:52.220Z",
+    "seed": 1194798250,
     "engine": "equilibrio-cover-ai-v1"
   }
 }

@@ -20,7 +20,7 @@
   "coverImage": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/home.webp",
   "coverAlt": "Capa editorial do artigo “Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo” — estilo Moderno, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-19",
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-08-12",
   "readingTime": 5,
   "featured": false,
   "status": "published",
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 6 SISTEMA IMUNOLOGICO BINDADO.docx",
   "faq": [],
-  "coverCaption": "Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo · composição waves horizon · brilho matinal",
-  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Moderno, iluminação brilho matinal, textura superfície polida, enquadramento close atmosférico, motivo visual formas organicas.",
+  "coverCaption": "Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo · composição waves horizon · luz suave difusa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Moderno, iluminação luz suave difusa, textura tecido orgânico, enquadramento composição em terços, motivo visual formas organicas.",
   "coverVariants": {
     "featured": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/featured.webp",
     "og": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/og.webp",
@@ -81,12 +81,12 @@
       "sistema",
       "nosso",
       "intestino",
-      "imunologico"
+      "aquela"
     ],
-    "lighting": "brilho matinal",
+    "lighting": "luz suave difusa",
     "motif": "formas-organicas",
-    "generatedAt": "2026-07-18T13:49:44.359Z",
-    "seed": 483649448,
+    "generatedAt": "2026-08-12T00:57:21.413Z",
+    "seed": 122521838,
     "engine": "equilibrio-cover-ai-v1"
   }
 }
