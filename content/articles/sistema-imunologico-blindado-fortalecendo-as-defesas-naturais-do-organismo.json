@@ -18,7 +18,7 @@
     "intestino-cerebro"
   ],
   "coverImage": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/home.webp",
-  "coverAlt": "Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo” — estilo Moderno, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-19",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 6 SISTEMA IMUNOLOGICO BINDADO.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "Sistema Imunológico Blindado: Fortalecendo as Defesas Naturais do Organismo · composição waves horizon · luz suave difusa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Moderno, iluminação luz suave difusa, textura tecido orgânico, enquadramento composição em terços, motivo visual formas organicas.",
   "coverVariants": {
     "featured": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/featured.webp",
     "og": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/sistema-imunologico-blindado-fortalecendo-as-defesas-naturais-do-organismo/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Moderno",
     "layout": "waves-horizon",
     "sentiment": "energizante",
     "keywords": [
@@ -85,11 +85,8 @@
     ],
     "lighting": "luz suave difusa",
     "motif": "formas-organicas",
-    "generatedAt": "2026-08-12T04:56:10.936Z",
+    "generatedAt": "2026-08-12T05:01:07.739Z",
     "seed": 122521838,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/senior-running-V1UPRPKBSO",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

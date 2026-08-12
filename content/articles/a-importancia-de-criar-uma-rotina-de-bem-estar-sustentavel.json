@@ -20,7 +20,7 @@
     "respiracao"
   ],
   "coverImage": "/images/covers/a-importancia-de-criar-uma-rotina-de-bem-estar-sustentavel/home.webp",
-  "coverAlt": "A Importância de Criar uma Rotina de Bem-Estar Sustentável — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "Capa editorial do artigo “A Importância de Criar uma Rotina de Bem-Estar Sustentável” — estilo Minimalista Premium, atmosfera acolhedor, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-01-30",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 10 - A IMPORTANCIA DE CRIAR A ROTINA.docx",
   "faq": [],
-  "coverCaption": "Foto: Healthy Living / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Healthy Living / Openverse.",
+  "coverCaption": "A Importância de Criar uma Rotina de Bem-Estar Sustentável · composição magazine left · penumbra serena",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Minimalista Premium, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual arcos respiratorios.",
   "coverVariants": {
     "featured": "/images/covers/a-importancia-de-criar-uma-rotina-de-bem-estar-sustentavel/featured.webp",
     "og": "/images/covers/a-importancia-de-criar-uma-rotina-de-bem-estar-sustentavel/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/a-importancia-de-criar-uma-rotina-de-bem-estar-sustentavel/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Minimalista Premium",
     "layout": "magazine-left",
     "sentiment": "acolhedor",
     "keywords": [
@@ -89,11 +89,8 @@
     ],
     "lighting": "penumbra serena",
     "motif": "arcos-respiratorios",
-    "generatedAt": "2026-08-12T04:54:48.004Z",
+    "generatedAt": "2026-08-12T04:59:58.262Z",
     "seed": 390425537,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Healthy Living",
-    "creditUrl": "https://stocksnap.io/photo/people-woman-IX4W28VSKO",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

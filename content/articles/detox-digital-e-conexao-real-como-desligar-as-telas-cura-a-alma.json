@@ -18,7 +18,7 @@
     "detox-digital"
   ],
   "coverImage": "/images/covers/detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma/home.webp",
-  "coverAlt": "Detox digital e conexão real: como desligar as telas cura a alma — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "Capa editorial do artigo “Detox digital e conexão real: como desligar as telas cura a alma” — estilo Natureza, atmosfera acolhedor, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-02-26",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -57,8 +57,8 @@
   ],
   "sourceFile": "ARTIGO 4 - DETOX DIGITAL.docx",
   "faq": [],
-  "coverCaption": "Foto: Oxfam East Africa / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: Oxfam East Africa / Openverse.",
+  "coverCaption": "Detox digital e conexão real: como desligar as telas cura a alma · composição portrait band · claridade limpa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Natureza, iluminação claridade limpa, textura granulado fino, enquadramento corte diagonal, motivo visual formas organicas.",
   "coverVariants": {
     "featured": "/images/covers/detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma/featured.webp",
     "og": "/images/covers/detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma/og.webp",
@@ -68,7 +68,7 @@
     "share": "/images/covers/detox-digital-e-conexao-real-como-desligar-as-telas-cura-a-alma/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Natureza",
     "layout": "portrait-band",
     "sentiment": "acolhedor",
     "keywords": [
@@ -85,11 +85,8 @@
     ],
     "lighting": "claridade limpa",
     "motif": "formas-organicas",
-    "generatedAt": "2026-08-12T04:55:20.484Z",
+    "generatedAt": "2026-08-12T05:00:20.672Z",
     "seed": 3623640740,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Oxfam East Africa",
-    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=89503206",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

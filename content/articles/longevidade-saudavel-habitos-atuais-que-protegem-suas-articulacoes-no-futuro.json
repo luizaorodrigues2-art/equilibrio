@@ -17,7 +17,7 @@
     "longevidade"
   ],
   "coverImage": "/images/covers/longevidade-saudavel-habitos-atuais-que-protegem-suas-articulacoes-no-futuro/home.webp",
-  "coverAlt": "Longevidade Saudável: Hábitos Atuais que Protegem suas Articulações no Futuro — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Longevidade Saudável: Hábitos Atuais que Protegem suas Articulações no Futuro” — estilo Lifestyle, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-04-12",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -55,8 +55,8 @@
   ],
   "sourceFile": "ARTIGO 9 - LONGEVIDADE SAUDAVEL.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "Longevidade Saudável: Hábitos Atuais que Protegem suas Articulações no Futuro · composição portrait band · luz suave difusa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Lifestyle, iluminação luz suave difusa, textura tecido orgânico, enquadramento composição em terços, motivo visual estrutura articular.",
   "coverVariants": {
     "featured": "/images/covers/longevidade-saudavel-habitos-atuais-que-protegem-suas-articulacoes-no-futuro/featured.webp",
     "og": "/images/covers/longevidade-saudavel-habitos-atuais-que-protegem-suas-articulacoes-no-futuro/og.webp",
@@ -66,7 +66,7 @@
     "share": "/images/covers/longevidade-saudavel-habitos-atuais-que-protegem-suas-articulacoes-no-futuro/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Lifestyle",
     "layout": "portrait-band",
     "sentiment": "acolhedor",
     "keywords": [
@@ -83,11 +83,8 @@
     ],
     "lighting": "luz suave difusa",
     "motif": "estrutura-articular",
-    "generatedAt": "2026-08-12T04:55:37.738Z",
+    "generatedAt": "2026-08-12T05:00:35.375Z",
     "seed": 545888790,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/stretching-exercises-Q2CTH2BFO7",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

@@ -19,7 +19,7 @@
     "detox"
   ],
   "coverImage": "/images/covers/desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente/home.webp",
-  "coverAlt": "Desintoxicação Real: Como Apoiar o Fígado e os Rins Naturalmente — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Desintoxicação Real: Como Apoiar o Fígado e os Rins Naturalmente” — estilo Saúde, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-25",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 7 - DESINTOXICAÇÃO REAL.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "Desintoxicação Real: Como Apoiar o Fígado e os Rins Naturalmente · composição soft grid · claridade limpa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Saúde, iluminação claridade limpa, textura granulado fino, enquadramento corte diagonal, motivo visual formas organicas.",
   "coverVariants": {
     "featured": "/images/covers/desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente/featured.webp",
     "og": "/images/covers/desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/desintoxicacao-real-como-apoiar-o-figado-e-os-rins-naturalmente/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Saúde",
     "layout": "soft-grid",
     "sentiment": "energizante",
     "keywords": [
@@ -87,11 +87,8 @@
     ],
     "lighting": "claridade limpa",
     "motif": "formas-organicas",
-    "generatedAt": "2026-08-12T04:55:17.443Z",
+    "generatedAt": "2026-08-12T05:00:18.189Z",
     "seed": 3234744124,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/active-senior-9DI94HTYAS",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

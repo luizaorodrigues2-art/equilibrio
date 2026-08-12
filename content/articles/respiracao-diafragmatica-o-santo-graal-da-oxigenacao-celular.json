@@ -20,7 +20,7 @@
     "imunidade"
   ],
   "coverImage": "/images/covers/respiracao-diafragmatica-o-santo-graal-da-oxigenacao-celular/home.webp",
-  "coverAlt": "Respiração Diafragmática: O Santo Graal da Oxigenação Celular — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Respiração Diafragmática: O Santo Graal da Oxigenação Celular” — estilo Lifestyle, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-04-06",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 8 - RESPIRAÇÃO DIAFRAGMATICA.docx",
   "faq": [],
-  "coverCaption": "Foto: Healthy Living / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Healthy Living / Openverse.",
+  "coverCaption": "Respiração Diafragmática: O Santo Graal da Oxigenação Celular · composição centered orb · luz suave difusa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Lifestyle, iluminação luz suave difusa, textura tecido orgânico, enquadramento composição em terços, motivo visual arcos respiratorios.",
   "coverVariants": {
     "featured": "/images/covers/respiracao-diafragmatica-o-santo-graal-da-oxigenacao-celular/featured.webp",
     "og": "/images/covers/respiracao-diafragmatica-o-santo-graal-da-oxigenacao-celular/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/respiracao-diafragmatica-o-santo-graal-da-oxigenacao-celular/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Lifestyle",
     "layout": "centered-orb",
     "sentiment": "acolhedor",
     "keywords": [
@@ -89,11 +89,8 @@
     ],
     "lighting": "luz suave difusa",
     "motif": "arcos-respiratorios",
-    "generatedAt": "2026-08-12T04:56:07.159Z",
+    "generatedAt": "2026-08-12T05:01:02.662Z",
     "seed": 3430026606,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Healthy Living",
-    "creditUrl": "https://stocksnap.io/photo/shoe-runner-X0BGOIK7NW",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

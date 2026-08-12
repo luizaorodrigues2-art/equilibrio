@@ -20,7 +20,7 @@
     "relacionamentos"
   ],
   "coverImage": "/images/covers/nutricao-consciente-alimentando-o-corpo-alem-das-calorias/home.webp",
-  "coverAlt": "Nutrição Consciente: Alimentando o Corpo Além das Calorias — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Nutrição Consciente: Alimentando o Corpo Além das Calorias” — estilo Natureza, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-02-11",
   "updatedAt": "2026-08-12",
   "readingTime": 4,
@@ -69,8 +69,8 @@
   ],
   "sourceFile": "ARTIGO 2 - NUTRIÇÃO CONCIENTE.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "Nutrição Consciente: Alimentando o Corpo Além das Calorias · composição abstract layers · luz azulada noturna",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Natureza, iluminação luz azulada noturna, textura papel texturizado sutil, enquadramento margem generosa, motivo visual linhas mentais.",
   "coverVariants": {
     "featured": "/images/covers/nutricao-consciente-alimentando-o-corpo-alem-das-calorias/featured.webp",
     "og": "/images/covers/nutricao-consciente-alimentando-o-corpo-alem-das-calorias/og.webp",
@@ -80,7 +80,7 @@
     "share": "/images/covers/nutricao-consciente-alimentando-o-corpo-alem-das-calorias/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Natureza",
     "layout": "abstract-layers",
     "sentiment": "acolhedor",
     "keywords": [
@@ -97,11 +97,8 @@
     ],
     "lighting": "luz azulada noturna",
     "motif": "linhas-mentais",
-    "generatedAt": "2026-08-12T04:55:44.467Z",
+    "generatedAt": "2026-08-12T05:00:40.275Z",
     "seed": 3004597331,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/senior-running-W9VNNZ0YVN",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

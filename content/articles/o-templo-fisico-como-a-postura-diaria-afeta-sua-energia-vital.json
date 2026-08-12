@@ -19,7 +19,7 @@
     "espiritualidade"
   ],
   "coverImage": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital/home.webp",
-  "coverAlt": "O Templo Físico: Como a Postura Diária Afeta sua Energia Vital — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “O Templo Físico: Como a Postura Diária Afeta sua Energia Vital” — estilo Corpo, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-01-21",
   "updatedAt": "2026-08-12",
   "readingTime": 6,
@@ -63,8 +63,8 @@
   ],
   "sourceFile": "ARTIGO 1 - O TEMPO FISICO COM NR-01.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "O Templo Físico: Como a Postura Diária Afeta sua Energia Vital · composição split diagonal · penumbra serena",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Corpo, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual arcos respiratorios.",
   "coverVariants": {
     "featured": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital/featured.webp",
     "og": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital/og.webp",
@@ -74,7 +74,7 @@
     "share": "/images/covers/o-templo-fisico-como-a-postura-diaria-afeta-sua-energia-vital/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Corpo",
     "layout": "split-diagonal",
     "sentiment": "energizante",
     "keywords": [
@@ -91,11 +91,8 @@
     ],
     "lighting": "penumbra serena",
     "motif": "arcos-respiratorios",
-    "generatedAt": "2026-08-12T04:56:00.500Z",
+    "generatedAt": "2026-08-12T05:00:55.319Z",
     "seed": 2999429745,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/active-senior-GGAN3U3C2J",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

@@ -17,7 +17,7 @@
     "sono"
   ],
   "coverImage": "/images/covers/o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador/home.webp",
-  "coverAlt": "O Ritmo do Descanso: A Ciência e a Arte do Sono Reparador — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “O Ritmo do Descanso: A Ciência e a Arte do Sono Reparador” — estilo Saúde, atmosfera energizante, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-02-20",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -55,8 +55,8 @@
   ],
   "sourceFile": "ARTIGO 3 - O RITMO DO DESCANSO.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "O Ritmo do Descanso: A Ciência e a Arte do Sono Reparador · composição portrait band · halo espiritual",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Saúde, iluminação halo espiritual, textura água translúcida, enquadramento centralidade forte, motivo visual lua e ondas.",
   "coverVariants": {
     "featured": "/images/covers/o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador/featured.webp",
     "og": "/images/covers/o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador/og.webp",
@@ -66,7 +66,7 @@
     "share": "/images/covers/o-ritmo-do-descanso-a-ciencia-e-a-arte-do-sono-reparador/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Saúde",
     "layout": "portrait-band",
     "sentiment": "energizante",
     "keywords": [
@@ -83,11 +83,8 @@
     ],
     "lighting": "halo espiritual",
     "motif": "lua-e-ondas",
-    "generatedAt": "2026-08-12T04:55:56.651Z",
+    "generatedAt": "2026-08-12T05:00:50.244Z",
     "seed": 2212922290,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/fitness-male-46YBDQQ43I",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

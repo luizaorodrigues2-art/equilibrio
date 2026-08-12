@@ -19,7 +19,7 @@
     "hidratacao"
   ],
   "coverImage": "/images/covers/hidratacao-profunda-a-agua-como-purificadora-das-celulas/home.webp",
-  "coverAlt": "Hidratação Profunda: A Água como Purificadora das Células — fotografia editorial sobre Saúde do Corpo, relacionada a corpo, saude-fisica, habitos, energia",
+  "coverAlt": "Capa editorial do artigo “Hidratação Profunda: A Água como Purificadora das Células” — estilo Corpo, atmosfera acolhedor, tema Saúde do Corpo, palavras-chave: corpo, saude-fisica, habitos, energia",
   "publishedAt": "2026-03-10",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 5 - HIDRATAÇÃO PROFUNDA.docx",
   "faq": [],
-  "coverCaption": "Foto: Direct Media / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde do Corpo). Foto: Direct Media / Openverse.",
+  "coverCaption": "Hidratação Profunda: A Água como Purificadora das Células · composição magazine left · penumbra serena",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Corpo, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual gotas e fluxo.",
   "coverVariants": {
     "featured": "/images/covers/hidratacao-profunda-a-agua-como-purificadora-das-celulas/featured.webp",
     "og": "/images/covers/hidratacao-profunda-a-agua-como-purificadora-das-celulas/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/hidratacao-profunda-a-agua-como-purificadora-das-celulas/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Corpo",
     "layout": "magazine-left",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,11 +87,8 @@
     ],
     "lighting": "penumbra serena",
     "motif": "gotas-e-fluxo",
-    "generatedAt": "2026-08-12T04:55:34.032Z",
+    "generatedAt": "2026-08-12T05:00:30.480Z",
     "seed": 3222603057,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Direct Media",
-    "creditUrl": "https://stocksnap.io/photo/senior-running-XOPCB6KLSN",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

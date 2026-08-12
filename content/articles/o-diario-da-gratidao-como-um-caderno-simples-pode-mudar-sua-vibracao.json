@@ -19,7 +19,7 @@
     "gratidao"
   ],
   "coverImage": "/images/covers/o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao/home.webp",
-  "coverAlt": "O diário da gratidão: como um caderno simples pode mudar sua vibração — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "Capa editorial do artigo “O diário da gratidão: como um caderno simples pode mudar sua vibração” — estilo Natureza, atmosfera acolhedor, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-02-17",
   "updatedAt": "2026-08-12",
   "readingTime": 4,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 3 - O DIÁRIO DA GRADIDÃO.docx",
   "faq": [],
-  "coverCaption": "Foto: iMahesh / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: iMahesh / Openverse.",
+  "coverCaption": "O diário da gratidão: como um caderno simples pode mudar sua vibração · composição soft grid · luz suave difusa",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Natureza, iluminação luz suave difusa, textura tecido orgânico, enquadramento composição em terços, motivo visual halo contemplativo.",
   "coverVariants": {
     "featured": "/images/covers/o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao/featured.webp",
     "og": "/images/covers/o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/o-diario-da-gratidao-como-um-caderno-simples-pode-mudar-sua-vibracao/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Natureza",
     "layout": "soft-grid",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,11 +87,8 @@
     ],
     "lighting": "luz suave difusa",
     "motif": "halo-contemplativo",
-    "generatedAt": "2026-08-12T04:55:49.797Z",
+    "generatedAt": "2026-08-12T05:00:42.722Z",
     "seed": 1118885414,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "iMahesh",
-    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=153320352",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

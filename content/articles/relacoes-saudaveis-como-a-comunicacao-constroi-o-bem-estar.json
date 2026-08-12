@@ -20,7 +20,7 @@
     "rotina"
   ],
   "coverImage": "/images/covers/relacoes-saudaveis-como-a-comunicacao-constroi-o-bem-estar/home.webp",
-  "coverAlt": "Relações Saudáveis: Como a Comunicação Constrói o Bem-Estar — fotografia editorial sobre Saúde da Mente, relacionada a mente, bem-estar, equilibrio-emocional, saude-mental",
+  "coverAlt": "Capa editorial do artigo “Relações Saudáveis: Como a Comunicação Constrói o Bem-Estar” — estilo Minimalista Premium, atmosfera acolhedor, tema Saúde da Mente, palavras-chave: mente, bem-estar, equilibrio-emocional, saude-mental",
   "publishedAt": "2026-04-03",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -61,8 +61,8 @@
   ],
   "sourceFile": "ARTIGO 8 - RELAÇÕES SAUDAVEIS.docx",
   "faq": [],
-  "coverCaption": "Foto: Altered Reality / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde da Mente). Foto: Altered Reality / Openverse.",
+  "coverCaption": "Relações Saudáveis: Como a Comunicação Constrói o Bem-Estar · composição asymmetric frame · penumbra serena",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Minimalista Premium, iluminação penumbra serena, textura fibra natural, enquadramento enquadramento assimétrico, motivo visual linhas mentais.",
   "coverVariants": {
     "featured": "/images/covers/relacoes-saudaveis-como-a-comunicacao-constroi-o-bem-estar/featured.webp",
     "og": "/images/covers/relacoes-saudaveis-como-a-comunicacao-constroi-o-bem-estar/og.webp",
@@ -72,7 +72,7 @@
     "share": "/images/covers/relacoes-saudaveis-como-a-comunicacao-constroi-o-bem-estar/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Minimalista Premium",
     "layout": "asymmetric-frame",
     "sentiment": "acolhedor",
     "keywords": [
@@ -89,11 +89,8 @@
     ],
     "lighting": "penumbra serena",
     "motif": "linhas-mentais",
-    "generatedAt": "2026-08-12T04:56:05.040Z",
+    "generatedAt": "2026-08-12T05:01:00.197Z",
     "seed": 516558593,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "Altered Reality",
-    "creditUrl": "https://stocksnap.io/photo/young-woman-YRE7TNGEOW",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }

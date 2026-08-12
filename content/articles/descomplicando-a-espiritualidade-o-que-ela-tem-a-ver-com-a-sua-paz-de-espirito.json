@@ -19,7 +19,7 @@
     "paz"
   ],
   "coverImage": "/images/covers/descomplicando-a-espiritualidade-o-que-ela-tem-a-ver-com-a-sua-paz-de-espirito/home.webp",
-  "coverAlt": "Descomplicando a espiritualidade: o que ela tem a ver com a sua paz de espírito? — fotografia editorial sobre Saúde Espiritual, relacionada a espiritualidade, paz-interior, autoconhecimento, presenca",
+  "coverAlt": "Capa editorial do artigo “Descomplicando a espiritualidade: o que ela tem a ver com a sua paz de espírito?” — estilo Cinema, atmosfera acolhedor, tema Saúde Espiritual, palavras-chave: espiritualidade, paz-interior, autoconhecimento, presenca",
   "publishedAt": "2026-01-15",
   "updatedAt": "2026-08-12",
   "readingTime": 5,
@@ -59,8 +59,8 @@
   ],
   "sourceFile": "ARTIGO 1 - DESCOMPLICANDO A ESPIRITUALIDADEE.docx",
   "faq": [],
-  "coverCaption": "Foto: iMahesh / Openverse",
-  "coverDescription": "Fotografia real selecionada para o tema do artigo (Saúde Espiritual). Foto: iMahesh / Openverse.",
+  "coverCaption": "Descomplicando a espiritualidade: o que ela tem a ver com a sua paz de espírito? · composição magazine left · contraste cinematográfico",
+  "coverDescription": "Arte de capa exclusiva gerada por IA de composição a partir do conteúdo do artigo. Estilo Cinema, iluminação contraste cinematográfico, textura névoa suave, enquadramento plano aberto, motivo visual arcos respiratorios.",
   "coverVariants": {
     "featured": "/images/covers/descomplicando-a-espiritualidade-o-que-ela-tem-a-ver-com-a-sua-paz-de-espirito/featured.webp",
     "og": "/images/covers/descomplicando-a-espiritualidade-o-que-ela-tem-a-ver-com-a-sua-paz-de-espirito/og.webp",
@@ -70,7 +70,7 @@
     "share": "/images/covers/descomplicando-a-espiritualidade-o-que-ela-tem-a-ver-com-a-sua-paz-de-espirito/share.webp"
   },
   "coverMeta": {
-    "style": "Fotografia Realista",
+    "style": "Cinema",
     "layout": "magazine-left",
     "sentiment": "acolhedor",
     "keywords": [
@@ -87,11 +87,8 @@
     ],
     "lighting": "contraste cinematográfico",
     "motif": "arcos-respiratorios",
-    "generatedAt": "2026-08-12T04:55:15.544Z",
+    "generatedAt": "2026-08-12T05:00:15.743Z",
     "seed": 3272157007,
-    "engine": "equilibrio-cover-photo-v1",
-    "credit": "iMahesh",
-    "creditUrl": "https://commons.wikimedia.org/w/index.php?curid=153320352",
-    "source": "Openverse"
+    "engine": "equilibrio-cover-ai-v1"
   }
 }
