@@ -853,8 +853,13 @@ async function openverseSearch(
 async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandidate[]> {
   const seen = new Set<string>();
   const out: PhotoCandidate[] = [];
-  await openverseSearch(queries, "stocksnap,rawpixel,nappy,wordpress", seen, out);
-  if (out.length < 4) await openverseSearch(queries, "", seen, out);
+  // 1) fotos profissionais limpas
+  await openverseSearch(queries, "stocksnap,rawpixel,nappy", seen, out);
+  // 2) só se faltar, amplia para fontes FOTOGRÁFICAS (Flickr dá volume/tema);
+  //    evita de propósito museus/Wikimedia/SVG que trazem bandeira/política/ícones.
+  if (out.length < 6) {
+    await openverseSearch(queries, "flickr,stocksnap,rawpixel,nappy,wordpress", seen, out);
+  }
   return out;
 }
 
@@ -863,6 +868,27 @@ async function downloadImage(url: string): Promise<Buffer> {
   const res = await fetch(url, { headers: { "User-Agent": FETCH_UA } });
   if (!res.ok) throw new Error(`download ${res.status}`);
   return Buffer.from(await res.arrayBuffer());
+}
+
+/**
+ * Garante que é uma FOTO de verdade e utilizável:
+ * formato raster, tamanho mínimo e variação de cor suficiente
+ * (descarta SVG, ícones, placeholders e imagens quase sólidas).
+ */
+async function isUsablePhoto(buf: Buffer): Promise<boolean> {
+  try {
+    const meta = await sharp(buf).metadata();
+    const fmt = meta.format || "";
+    if (!["jpeg", "jpg", "png", "webp", "avif", "tiff"].includes(fmt)) return false;
+    if (!meta.width || !meta.height || meta.width < 600 || meta.height < 400) return false;
+    const stats = await sharp(buf).stats();
+    const avgStd =
+      stats.channels.reduce((s, c) => s + c.stdev, 0) / (stats.channels.length || 1);
+    if (avgStd < 14) return false; // quase sólida (placeholder/silhueta)
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 /** Camada transparente: leve tint azul-marinho + gradiente para leitura. */
@@ -953,14 +979,16 @@ async function generatePhotoCoverPackage(
   let photoBuffer: Buffer | null = null;
   for (const cand of ordered) {
     try {
-      photoBuffer = await downloadImage(cand.downloadUrl);
+      const buf = await downloadImage(cand.downloadUrl);
+      if (!(await isUsablePhoto(buf))) continue; // descarta SVG/placeholder/quase sólida
+      photoBuffer = buf;
       chosen = cand;
       break;
     } catch {
       /* tenta o próximo candidato */
     }
   }
-  if (!chosen || !photoBuffer) throw new Error("Nenhuma foto pôde ser baixada");
+  if (!chosen || !photoBuffer) throw new Error("Nenhuma foto utilizável pôde ser baixada");
 
   const outDir = path.join(publicDir, "images", "covers", article.slug);
   fs.mkdirSync(outDir, { recursive: true });
