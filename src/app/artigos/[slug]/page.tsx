@@ -17,6 +17,7 @@ import { TableOfContents } from "@/components/article/TableOfContents";
 import { ShareButtons } from "@/components/article/ShareButtons";
 import { ArticleBody } from "@/components/article/ArticleBody";
 import { ArticleAudio } from "@/components/article/ArticleAudio";
+import { ArticleListen } from "@/components/article/ArticleListen";
 import { ArticleSidebar } from "@/components/article/ArticleSidebar";
 import { RelatedArticles } from "@/components/article/RelatedArticles";
 import { ArticleNav } from "@/components/article/ArticleNav";
@@ -115,7 +116,12 @@ export default async function ArticlePage({
         <article>
           {article.audioUrl ? (
             <ArticleAudio src={article.audioUrl} title={article.title} />
-          ) : null}
+          ) : (
+            <ArticleListen
+              text={article.contentText || article.content.replace(/<[^>]+>/g, " ")}
+              title={article.title}
+            />
+          )}
 
           <ArticleBody content={article.content} />
 
