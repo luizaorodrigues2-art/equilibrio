@@ -733,7 +733,7 @@ async function fetchOpenverseCandidates(queries: string[]): Promise<PhotoCandida
       const res = await fetch(
         `https://api.openverse.org/v1/images/?q=${encodeURIComponent(
           q
-        )}&license_type=commercial&aspect_ratio=wide&size=large&mature=false&page_size=20`,
+        )}&license_type=commercial&mature=false&page_size=30`,
         { headers: { "User-Agent": FETCH_UA, Accept: "application/json" } }
       );
       if (!res.ok) continue;
@@ -840,11 +840,13 @@ async function generatePhotoCoverPackage(
       .map(([, id]) => String(id))
   );
 
-  // Escolha determinística (estável por artigo) e única; baixa a 1ª que funcionar.
-  const start = brief.seed % candidates.length;
-  const ordered = candidates
-    .map((_, i) => candidates[(start + i) % candidates.length])
-    .sort((a, b) => Number(usedByOthers.has(a.id)) - Number(usedByOthers.has(b.id)));
+  // Prioriza os candidatos da consulta mais específica (o "motivo" do artigo,
+  // que vem primeiro) e que ainda não foram usados em outro artigo — mantém a
+  // relação com o tema e garante unicidade. Baixa o 1º que funcionar.
+  const ordered = [
+    ...candidates.filter((c) => !usedByOthers.has(c.id)),
+    ...candidates.filter((c) => usedByOthers.has(c.id)),
+  ];
 
   let chosen: PhotoCandidate | null = null;
   let photoBuffer: Buffer | null = null;
