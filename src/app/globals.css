@@ -1571,6 +1571,12 @@ body.site-cinema .ad-slot {
   gap: 0.65rem;
 }
 
+.brand-logo--stack {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.28rem;
+  text-align: center;
+}
 .brand-logo__mark {
   width: auto;
   height: auto;
@@ -1580,11 +1586,25 @@ body.site-cinema .ad-slot {
   /* Integra o emblema transparente à iluminação do header/footer escuros */
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.38));
 }
-.brand-logo--sm .brand-logo__mark { max-height: 68px; }
-.brand-logo--md .brand-logo__mark { max-height: 96px; }
-.brand-logo--lg .brand-logo__mark { max-height: 132px; }
+.brand-logo--sm .brand-logo__mark { max-height: 44px; }
+.brand-logo--md .brand-logo__mark { max-height: 84px; }
+.brand-logo--lg .brand-logo__mark { max-height: 120px; }
+.brand-logo__wordmark {
+  font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cin-white-soft, #f4f6fb);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+.brand-logo--sm .brand-logo__wordmark { font-size: 0.66rem; }
+.brand-logo--md .brand-logo__wordmark { font-size: 1rem; }
+.brand-logo--lg .brand-logo__wordmark { font-size: 1.4rem; }
 @media (max-width: 560px) {
-  .brand-logo--sm .brand-logo__mark { max-height: 56px; }
+  .brand-logo--sm .brand-logo__mark { max-height: 40px; }
+  .brand-logo--sm .brand-logo__wordmark { font-size: 0.58rem; letter-spacing: 0.16em; }
 }
 
 .brand-logo-link {

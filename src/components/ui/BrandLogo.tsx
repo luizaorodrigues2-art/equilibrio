@@ -12,15 +12,15 @@ type BrandLogoProps = {
 const LOGO_MARK = "/assets/brand/logo-mark.png";
 
 const sizes = {
-  sm: 68,
-  md: 96,
-  lg: 132,
+  sm: 44,
+  md: 84,
+  lg: 120,
 };
 
 export function BrandLogo({ href = "/", size = "md", className = "" }: BrandLogoProps) {
   const dim = sizes[size];
   const content = (
-    <span className={`brand-logo brand-logo--${size} ${className}`.trim()}>
+    <span className={`brand-logo brand-logo--stack brand-logo--${size} ${className}`.trim()}>
       <Image
         src={LOGO_MARK}
         alt={siteConfig.name}
@@ -30,6 +30,7 @@ export function BrandLogo({ href = "/", size = "md", className = "" }: BrandLogo
         priority={size !== "lg"}
         style={{ width: "auto", height: dim, maxHeight: dim, objectFit: "contain" }}
       />
+      <span className="brand-logo__wordmark">{siteConfig.name}</span>
     </span>
   );
 
